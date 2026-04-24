@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey | Women of Purpose</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#fff;
+    color:#2d1247;
+    overflow-x:hidden;
+}
+
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+.top-shape{
+    position:absolute;
+    top:0;
+    left:0;
+    width:340px;
+    height:230px;
+    background:linear-gradient(135deg,#3e0d68,#6f2da8);
+    border-bottom-right-radius:220px;
+    z-index:0;
+}
+
+.gold-splash{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+    height:220px;
+    background:linear-gradient(135deg,#f7e49a,#c79b2a);
+    clip-path:polygon(28% 0%,100% 0%,100% 100%,0% 55%);
+    opacity:.85;
+    z-index:0;
+}
+
+header{
+    text-align:center;
+    padding:28px 20px 10px;
+    position:relative;
+    z-index:5;
+    background:#fff;
+}
+
+header img{width:145px}
+
+header h1{
+    font-family:'Cinzel',serif;
+    font-size:52px;
+    line-height:1;
+    color:#341052;
+    margin-top:8px;
+}
+
+header h1 span{
+    font-size:34px;
+    font-weight:400;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    padding:22px 20px;
+    position:relative;
+    z-index:5;
+}
+
+.nav-buttons a{
+    text-decoration:none;
+    min-width:180px;
+    padding:14px 26px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    color:#341052;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s ease;
+}
+
+.nav-buttons a:hover,
+.nav-buttons a.active{
+    background:#4b1770;
+    color:#fff;
+    border-color:#4b1770;
+    transform:translateY(-3px);
+}
+
+.journey-section{
+    position:relative;
+    z-index:5;
+    padding:45px 7% 65px;
+}
+
+.page-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 34px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    color:#341052;
+    font-family:'Cinzel',serif;
+    font-size:26px;
+    font-weight:700;
+    box-shadow:0 12px 25px rgba(54,21,84,.12);
+    margin-bottom:34px;
+}
+
+.journey-card{
+    max-width:1150px;
+    margin:0 auto;
+    background:linear-gradient(135deg,#fff,#fbf6ea);
+    border:3px solid #ead083;
+    border-radius:38px;
+    padding:50px 58px;
+    box-shadow:0 25px 55px rgba(54,21,84,.12);
+    position:relative;
+    overflow:hidden;
+}
+
+.journey-title{
+    font-family:'Great Vibes',cursive;
+    font-size:78px;
+    color:#b88920;
+    line-height:1;
+    margin-bottom:8px;
+}
+
+.journey-subtitle{
+    font-family:'Cinzel',serif;
+    font-size:36px;
+    color:#341052;
+    margin-bottom:28px;
+}
+
+.journey-text{
+    font-size:20px;
+    line-height:1.95;
+    color:#2f2438;
+}
+
+.journey-text p{
+    margin-bottom:22px;
+}
+
+.journey-highlight{
+    font-family:'Cinzel',serif;
+    font-weight:700;
+    color:#4b1770;
+}
+
+.script-line{
+    font-family:'Great Vibes',cursive;
+    color:#b88920;
+    font-size:40px;
+    line-height:1.2;
+}
+
+.gallery-section{
+    position:relative;
+    z-index:5;
+    padding:25px 6% 85px;
+}
+
+.gallery-heading{
+    text-align:center;
+    margin-bottom:34px;
+}
+
+.gallery-heading h2{
+    font-family:'Cinzel',serif;
+    font-size:50px;
+    color:#341052;
+    margin-bottom:10px;
+}
+
+.gallery-heading p{
+    font-size:20px;
+    color:#5c4d70;
+}
+
+.carousel-wrap{
+    position:relative;
+    max-width:1400px;
+    margin:0 auto;
+    padding:10px 70px 0;
+}
+
+.viewport{
+    overflow:hidden;
+}
+
+.track{
+    display:flex;
+    gap:28px;
+    transition:transform .55s ease;
+}
+
+.gallery-card{
+    flex:0 0 calc(25% - 21px);
+    min-width:calc(25% - 21px);
+}
+
+.gallery-thumb{
+    width:100%;
+    height:360px;
+    border-radius:34px;
+    overflow:hidden;
+    border:6px solid #c89b2d;
+    background:#fff;
+    box-shadow:0 18px 35px rgba(54,21,84,.14);
+    cursor:pointer;
+}
+
+.gallery-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-name{
+    text-align:center;
+    margin-top:14px;
+    font-size:17px;
+    font-weight:700;
+    color:#341052;
+}
+
+.carousel-btn{
+    position:absolute;
+    top:45%;
+    transform:translateY(-50%);
+    width:56px;
+    height:56px;
+    border:none;
+    border-radius:50%;
+    background:#4b1770;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:15;
+}
+
+.carousel-btn.prev{left:0}
+.carousel-btn.next{right:0}
+
+.carousel-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:26px;
+}
+
+.carousel-dots .dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#d5c7e6;
+    cursor:pointer;
+}
+
+.carousel-dots .dot.active{
+    background:#4b1770;
+}
+
+.poster-lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(18,8,28,.88);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    opacity:0;
+    visibility:hidden;
+    transition:.25s ease;
+    z-index:9999;
+}
+
+.poster-lightbox.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.poster-lightbox-content{
+    position:relative;
+    max-width:900px;
+    width:100%;
+}
+
+.poster-lightbox-content img{
+    width:100%;
+    max-height:88vh;
+    object-fit:contain;
+    display:block;
+    border-radius:22px;
+    border:6px solid #c89b2d;
+    background:#fff;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:-18px;
+    right:-18px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#341052;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+footer{
+    background:linear-gradient(135deg,#2d0947,#4d1773);
+    color:#fff;
+    text-align:center;
+    padding:46px 20px 35px;
+    border-top:5px solid #c89b2d;
+}
+
+footer h3{
+    font-family:'Cinzel',serif;
+    color:#e7c86f;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.motto{
+    font-size:34px;
+    margin-bottom:28px;
+}
+
+.contact{
+    font-size:34px;
+    margin-bottom:24px;
+}
+
+.contact i{
+    color:#25D366;
+    margin-right:10px;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.socials a{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:2px solid #e7c86f;
+    color:#e7c86f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:24px;
+}
+
+@media(max-width:1100px){
+    .gallery-card{
+        flex:0 0 calc(50% - 14px);
+        min-width:calc(50% - 14px);
+    }
+
+    .journey-card{
+        padding:42px 34px;
+    }
+
+    .journey-title{
+        font-size:64px;
+    }
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:38px;
+    }
+
+    header h1 span{
+        font-size:24px;
+    }
+
+    .nav-buttons a{
+        min-width:150px;
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+    .journey-section{
+        padding:32px 20px 50px;
+    }
+
+    .journey-card{
+        padding:34px 24px;
+    }
+
+    .journey-title{
+        font-size:52px;
+    }
+
+    .journey-subtitle{
+        font-size:24px;
+    }
+
+    .journey-text{
+        font-size:17px;
+        line-height:1.8;
+    }
+
+    .gallery-heading h2{
+        font-size:34px;
+    }
+
+    .carousel-wrap{
+        padding:10px 48px 0;
+    }
+
+    .gallery-card{
+        flex:0 0 100%;
+        min-width:100%;
+    }
+
+    .gallery-thumb{
+        height:420px;
+    }
+
+    .carousel-btn{
+        width:46px;
+        height:46px;
+        font-size:18px;
+    }
+
+    .motto,
+    .contact{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="top-shape"></div>
+<div class="gold-splash"></div>
+
+<header>
+    <img src="images/logo.png" alt="Women of Purpose Logo">
+    <h1>WOMEN <span>of</span><br>PURPOSE</h1>
+</header>
+
+<nav class="nav-buttons">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="our-journey.html" class="active"><i class="fas fa-road"></i> Our Journey</a>
+    <a href="index.html#events"><i class="fas fa-calendar-alt"></i> Events</a>
+    <a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
+    <a href="connect.html"><i class="far fa-heart"></i> Connect</a>
+</nav>
+
+<section class="journey-section">
+
+    <div style="text-align:center;">
+        <div class="page-pill">
+            <i class="fas fa-road"></i> Our Journey
+        </div>
+    </div>
+
+    <div class="journey-card">
+        <div class="journey-title">Our Journey</div>
+        <div class="journey-subtitle">From London to Ghana, and Beyond</div>
+
+        <div class="journey-text">
+            <p><span class="journey-highlight">Women of Purpose</span> began its journey in 2014 in London, with our very first conference featuring renowned talk show host <span class="journey-highlight">Nana Churcher</span> as our Guest Speaker.</p>
+
+            <p>From those early days, Women of Purpose created meaningful spaces for women to be refreshed, equipped, and encouraged through prayer meetings, prayer walks, DIY workshops, healthy living sessions, marriage and relationship talks, and practical life-building gatherings.</p>
+
+            <p>One memorable workshop included a healthy living session led by a local nurse, who shared valuable advice on hydration, wellbeing, and taking care of the body as part of living a balanced and purposeful life.</p>
+
+            <p>The vision was given to <span class="journey-highlight">Pastor Amelia</span> to bring together women from all walks of life and share her experiences in a practical, honest, and transparent way.</p>
+
+            <p>Her heart has always been to empower women to become all that God has called them to be — growing in wisdom, developing practical skills, building confidence, and reconnecting deeply with God.</p>
+
+            <p>In 2022, the vision expanded internationally with the launch of the <span class="journey-highlight">Ghana chapter at the University of Cape Coast (UCC)</span>. Since then, conferences, Paint and Praise sessions, self-esteem workshops, and mentoring sessions have been held.</p>
+
+            <p>After a period of sabbatical, <span class="journey-highlight">Women of Purpose Global was relaunched in January 2026</span> with renewed strength, clarity, and passion.</p>
+
+            <p class="script-line">Our story is still unfolding.</p>
+
+            <p>Pastor Amelia aspires to see Women of Purpose chapters established across the world — developing Kingdom women, doing Kingdom business, walking boldly in their full potential, and becoming all that God has created them to be.</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="gallery-section">
+
+    <div class="gallery-heading">
+        <h2>Journey Gallery</h2>
+        <p>Moments from our conferences, workshops, mentoring sessions and gatherings.</p>
+    </div>
+
+    <div class="carousel-wrap">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="viewport">
+            <div class="track" id="galleryTrack"></div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+</section>
+
+<footer>
+    <h3>OUR MOTTO</h3>
+
+    <div class="motto">
+        I PRAY. I ALIGN. I WALK IN MY PURPOSE.
+    </div>
+
+    <div class="contact">
+        <i class="fab fa-whatsapp"></i>
+        +233(0)24 624 2700
+    </div>
+
+    <div class="socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+</div>
+
+<div class="poster-lightbox" id="posterLightbox">
+    <div class="poster-lightbox-content">
+        <button class="close-lightbox" onclick="closePoster()" aria-label="Close image">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightboxImage" src="" alt="Women of Purpose Image">
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+    const galleryTrack = document.getElementById('galleryTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsWrap = document.getElementById('carouselDots');
+
+    if(!galleryTrack) return;
+
+    for(let i = 1; i <= 18; i++){
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+
+        card.innerHTML = `
+            <div class="gallery-thumb" onclick="openPoster('images/wop${i}.png','Women of Purpose Journey ${i}')">
+                <img src="images/wop${i}.png" alt="Women of Purpose Journey ${i}">
+            </div>
+            <div class="gallery-name">Journey Moment ${i}</div>
+        `;
+
+        galleryTrack.appendChild(card);
+    }
+
+    const cards = galleryTrack.querySelectorAll('.gallery-card');
+
+    let currentIndex = 0;
+    let autoSlide;
+
+    function getCardsPerView(){
+        if(window.innerWidth <= 700) return 1;
+        if(window.innerWidth <= 1100) return 2;
+        return 4;
+    }
+
+    function getMaxIndex(){
+        return Math.max(cards.length - getCardsPerView(), 0);
+    }
+
+    function buildDots(){
+        if(!dotsWrap) return;
+
+        dotsWrap.innerHTML = '';
+        const totalDots = getMaxIndex() + 1;
+
+        for(let i = 0; i < totalDots; i++){
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (i === currentIndex ? ' active' : '');
+
+            dot.addEventListener('click', function(){
+                currentIndex = i;
+                updateCarousel();
+                restartAutoSlide();
+            });
+
+            dotsWrap.appendChild(dot);
+        }
+    }
+
+    function updateCarousel(){
+        if(cards.length === 0) return;
+
+        const firstCard = cards[0];
+        const gap = 28;
+        const moveAmount = firstCard.offsetWidth + gap;
+
+        if(currentIndex > getMaxIndex()){
+            currentIndex = 0;
+        }
+
+        galleryTrack.style.transform = `translateX(-${currentIndex * moveAmount}px)`;
+        buildDots();
+    }
+
+    function nextSlide(){
+        currentIndex = currentIndex >= getMaxIndex() ? 0 : currentIndex + 1;
+        updateCarousel();
+    }
+
+    function prevSlide(){
+        currentIndex = currentIndex <= 0 ? getMaxIndex() : currentIndex - 1;
+        updateCarousel();
+    }
+
+    function startAutoSlide(){
+        autoSlide = setInterval(nextSlide, 4500);
+    }
+
+    function restartAutoSlide(){
+        clearInterval(autoSlide);
+        startAutoSlide();
+    }
+
+    if(prevBtn){
+        prevBtn.addEventListener('click', function(){
+            prevSlide();
+            restartAutoSlide();
+        });
+    }
+
+    if(nextBtn){
+        nextBtn.addEventListener('click', function(){
+            nextSlide();
+            restartAutoSlide();
+        });
+    }
+
+    window.addEventListener('resize', function(){
+        currentIndex = 0;
+        updateCarousel();
+    });
+
+    updateCarousel();
+    startAutoSlide();
+});
+
+function openPoster(src, altText){
+    const lightbox = document.getElementById('posterLightbox');
+    const image = document.getElementById('lightboxImage');
+
+    if(!lightbox || !image) return;
+
+    image.src = src;
+    image.alt = altText;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePoster(){
+    const lightbox = document.getElementById('posterLightbox');
+
+    if(!lightbox) return;
+
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('click', function(e){
+    const lightbox = document.getElementById('posterLightbox');
+
+    if(lightbox && e.target === lightbox){
+        closePoster();
+    }
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+        closePoster();
+    }
+});
+</script>
+
+</body>
+</html>
