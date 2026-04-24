@@ -206,7 +206,9 @@ header h1 span{
     padding:10px 70px 0;
 }
 
-.viewport{overflow:hidden}
+.viewport{
+    overflow:hidden;
+}
 
 .track{
     display:flex;
@@ -234,7 +236,6 @@ header h1 span{
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:center;
     display:block;
 }
 
@@ -279,7 +280,9 @@ header h1 span{
     cursor:pointer;
 }
 
-.carousel-dots .dot.active{background:#4b1770}
+.carousel-dots .dot.active{
+    background:#4b1770;
+}
 
 .poster-lightbox{
     position:fixed;
@@ -387,13 +390,23 @@ footer h3{
         min-width:calc(50% - 14px);
     }
 
-    .journey-card{padding:42px 34px}
-    .journey-title{font-size:64px}
+    .journey-card{
+        padding:42px 34px;
+    }
+
+    .journey-title{
+        font-size:64px;
+    }
 }
 
 @media(max-width:700px){
-    header h1{font-size:38px}
-    header h1 span{font-size:24px}
+    header h1{
+        font-size:38px;
+    }
+
+    header h1 span{
+        font-size:24px;
+    }
 
     .nav-buttons a{
         min-width:150px;
@@ -401,18 +414,34 @@ footer h3{
         font-size:14px;
     }
 
-    .journey-section{padding:32px 20px 50px}
-    .journey-card{padding:34px 24px}
-    .journey-title{font-size:52px}
-    .journey-subtitle{font-size:24px}
+    .journey-section{
+        padding:32px 20px 50px;
+    }
+
+    .journey-card{
+        padding:34px 24px;
+    }
+
+    .journey-title{
+        font-size:52px;
+    }
+
+    .journey-subtitle{
+        font-size:24px;
+    }
 
     .journey-text{
         font-size:17px;
         line-height:1.8;
     }
 
-    .gallery-heading h2{font-size:34px}
-    .carousel-wrap{padding:10px 48px 0}
+    .gallery-heading h2{
+        font-size:34px;
+    }
+
+    .carousel-wrap{
+        padding:10px 48px 0;
+    }
 
     .gallery-card{
         flex:0 0 100%;
@@ -430,7 +459,9 @@ footer h3{
     }
 
     .motto,
-    .contact{font-size:22px}
+    .contact{
+        font-size:22px;
+    }
 }
 </style>
 </head>
@@ -487,6 +518,7 @@ footer h3{
             <p>Pastor Amelia aspires to see Women of Purpose chapters established across the world — developing Kingdom women, doing Kingdom business, walking boldly in their full potential, and becoming all that God has created them to be.</p>
         </div>
     </div>
+
 </section>
 
 <section class="gallery-section">
@@ -497,7 +529,7 @@ footer h3{
     </div>
 
     <div class="carousel-wrap">
-        <button class="carousel-btn prev" id="prevBtn">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous image">
             <i class="fas fa-chevron-left"></i>
         </button>
 
@@ -505,7 +537,7 @@ footer h3{
             <div class="track" id="galleryTrack"></div>
         </div>
 
-        <button class="carousel-btn next" id="nextBtn">
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next image">
             <i class="fas fa-chevron-right"></i>
         </button>
 
@@ -537,7 +569,7 @@ footer h3{
 
 <div class="poster-lightbox" id="posterLightbox">
     <div class="poster-lightbox-content">
-        <button class="close-lightbox" onclick="closePoster()">
+        <button class="close-lightbox" onclick="closePoster()" aria-label="Close image">
             <i class="fas fa-times"></i>
         </button>
         <img id="lightboxImage" src="" alt="Women of Purpose Image">
@@ -551,6 +583,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const dotsWrap = document.getElementById('carouselDots');
+
+    if(!galleryTrack) return;
 
     for(let i = 1; i <= 18; i++){
         const card = document.createElement('div');
@@ -566,7 +600,8 @@ document.addEventListener('DOMContentLoaded', function(){
         galleryTrack.appendChild(card);
     }
 
-    const cards = document.querySelectorAll('.gallery-card');
+    const cards = galleryTrack.querySelectorAll('.gallery-card');
+
     let currentIndex = 0;
     let autoSlide;
 
@@ -581,6 +616,8 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function buildDots(){
+        if(!dotsWrap) return;
+
         dotsWrap.innerHTML = '';
         const totalDots = getMaxIndex() + 1;
 
@@ -632,15 +669,19 @@ document.addEventListener('DOMContentLoaded', function(){
         startAutoSlide();
     }
 
-    prevBtn.addEventListener('click', function(){
-        prevSlide();
-        restartAutoSlide();
-    });
+    if(prevBtn){
+        prevBtn.addEventListener('click', function(){
+            prevSlide();
+            restartAutoSlide();
+        });
+    }
 
-    nextBtn.addEventListener('click', function(){
-        nextSlide();
-        restartAutoSlide();
-    });
+    if(nextBtn){
+        nextBtn.addEventListener('click', function(){
+            nextSlide();
+            restartAutoSlide();
+        });
+    }
 
     window.addEventListener('resize', function(){
         currentIndex = 0;
@@ -655,6 +696,8 @@ function openPoster(src, altText){
     const lightbox = document.getElementById('posterLightbox');
     const image = document.getElementById('lightboxImage');
 
+    if(!lightbox || !image) return;
+
     image.src = src;
     image.alt = altText;
     lightbox.classList.add('active');
@@ -664,6 +707,8 @@ function openPoster(src, altText){
 function closePoster(){
     const lightbox = document.getElementById('posterLightbox');
 
+    if(!lightbox) return;
+
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
 }
@@ -671,7 +716,7 @@ function closePoster(){
 document.addEventListener('click', function(e){
     const lightbox = document.getElementById('posterLightbox');
 
-    if(e.target === lightbox){
+    if(lightbox && e.target === lightbox){
         closePoster();
     }
 });
