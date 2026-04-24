@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women of Purpose</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#ffffff;
+    color:#2d1247;
+    overflow-x:hidden;
+}
+
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+.top-shape{
+    position:absolute;
+    top:0;
+    left:0;
+    width:340px;
+    height:230px;
+    background:linear-gradient(135deg,#3e0d68,#6f2da8);
+    border-bottom-right-radius:220px;
+    z-index:0;
+}
+
+.gold-splash{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+    height:220px;
+    background:linear-gradient(135deg,#f7e49a,#c79b2a);
+    clip-path:polygon(28% 0%,100% 0%,100% 100%,0% 55%);
+    opacity:.85;
+    z-index:0;
+}
+
+header{
+    text-align:center;
+    padding:28px 20px 10px;
+    position:relative;
+    z-index:5;
+    background:#ffffff;
+}
+
+header img{width:145px}
+
+header h1{
+    font-family:'Cinzel', serif;
+    font-size:52px;
+    line-height:1;
+    color:#341052;
+    margin-top:8px;
+}
+
+header h1 span{
+    font-size:34px;
+    font-weight:400;
+}
+
+.month-banner{
+    position:relative;
+    z-index:5;
+    width:100%;
+    margin:10px 0 8px;
+    cursor:pointer;
+    background:#f7f2e8;
+}
+
+.month-banner img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    padding:20px;
+    position:relative;
+    z-index:5;
+}
+
+.nav-buttons a{
+    text-decoration:none;
+    min-width:180px;
+    padding:14px 26px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    color:#341052;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s ease;
+}
+
+.nav-buttons a:hover{
+    background:#4b1770;
+    color:#fff;
+    border-color:#4b1770;
+    transform:translateY(-3px);
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1.05fr 0.75fr 0.9fr;
+    align-items:center;
+    gap:28px;
+    padding:35px 6% 55px;
+    position:relative;
+    z-index:5;
+}
+
+.hero-middle{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.scripture-card{
+    width:100%;
+    max-width:360px;
+    text-align:center;
+    padding:28px 24px;
+    border-left:2px solid #d6ad45;
+    border-right:2px solid #d6ad45;
+    background:linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,248,230,.75));
+}
+
+.scripture-top,
+.scripture-bottom{
+    font-family:'Cinzel', serif;
+    color:#b88920;
+    font-size:22px;
+    letter-spacing:6px;
+    margin:6px 0 12px;
+}
+
+.scripture-main{
+    font-family:'Cinzel', serif;
+    font-size:30px;
+    line-height:1.35;
+    color:#341052;
+    font-weight:700;
+}
+
+.scripture-script{
+    font-family:'Great Vibes', cursive;
+    font-size:48px;
+    color:#b88920;
+    line-height:1;
+    display:block;
+    margin:4px 0;
+}
+
+.scripture-good{
+    font-family:'Great Vibes', cursive;
+    font-size:58px;
+    color:#341052;
+    line-height:1;
+    display:block;
+    margin:8px 0;
+}
+
+.scripture-ref{
+    display:inline-block;
+    margin-top:18px;
+    padding:8px 24px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    font-family:'Cinzel', serif;
+    font-size:16px;
+    font-weight:700;
+    color:#341052;
+    letter-spacing:1px;
+}
+
+.hero-right{
+    width:100%;
+    text-align:center;
+}
+
+.founder-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+}
+
+.founder-wrap img{
+    width:500px;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.founder-info{
+    text-align:left;
+    min-width:160px;
+}
+
+.founder-name{
+    font-family:'Cinzel', serif;
+    font-size:32px;
+    line-height:1.15;
+    font-weight:700;
+    color:#341052;
+}
+
+.founder-title{
+    font-family:'Great Vibes', cursive;
+    color:#b88920;
+    font-size:34px;
+    margin-top:12px;
+}
+
+.founder-line{
+    width:120px;
+    height:2px;
+    background:#c89b2d;
+    margin:12px 0 0;
+}
+
+.welcome{
+    font-family:'Great Vibes', cursive;
+    font-size:108px;
+    color:#b88920;
+    line-height:.88;
+}
+
+.home{
+    font-family:'Cinzel', serif;
+    font-size:148px;
+    line-height:.9;
+    color:#341052;
+    font-weight:700;
+}
+
+.subheading{
+    font-family:'Cinzel', serif;
+    font-size:54px;
+    color:#341052;
+    margin:10px 0 24px;
+}
+
+.subheading span{
+    font-family:'Great Vibes', cursive;
+    font-size:58px;
+}
+
+.vision{
+    font-size:28px;
+    line-height:1.7;
+    max-width:700px;
+    color:#1e1e1e;
+}
+
+.events-section{
+    position:relative;
+    z-index:5;
+    padding:35px 6% 80px;
+}
+
+.events-heading{
+    text-align:center;
+    margin-bottom:34px;
+}
+
+.events-heading h2{
+    font-family:'Cinzel', serif;
+    font-size:54px;
+    color:#341052;
+    margin-bottom:10px;
+}
+
+.events-heading p{
+    font-size:22px;
+    color:#5c4d70;
+}
+
+.events-carousel-wrap{
+    position:relative;
+    max-width:1400px;
+    margin:0 auto;
+    padding:10px 70px 0;
+}
+
+.events-viewport{overflow:hidden}
+
+.events-track{
+    display:flex;
+    gap:28px;
+    transition:transform .55s ease;
+    will-change:transform;
+}
+
+.event-card{
+    flex:0 0 calc(25% - 21px);
+    min-width:calc(25% - 21px);
+    position:relative;
+}
+
+.event-thumb{
+    position:relative;
+    width:100%;
+    height:380px;
+    border-radius:34px;
+    overflow:hidden;
+    border:6px solid #c89b2d;
+    background:#ffffff;
+    box-shadow:0 18px 35px rgba(54,21,84,0.14);
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.event-thumb:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 26px 46px rgba(54,21,84,0.2);
+}
+
+.event-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.event-name{
+    text-align:center;
+    margin-top:16px;
+    font-size:18px;
+    font-weight:700;
+    color:#341052;
+    line-height:1.4;
+}
+
+.hover-preview{
+    position:absolute;
+    left:50%;
+    top:-20px;
+    transform:translate(-50%, -100%) scale(.92);
+    width:340px;
+    max-width:90vw;
+    background:#fff;
+    border:5px solid #c89b2d;
+    border-radius:24px;
+    box-shadow:0 25px 55px rgba(0,0,0,.24);
+    padding:10px;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:.28s ease;
+    z-index:20;
+}
+
+.hover-preview img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:16px;
+}
+
+.event-card:hover .hover-preview{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%, -100%) scale(1);
+}
+
+.placeholder-box{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:26px;
+    background:linear-gradient(135deg,#4b1770,#7b2cbf);
+    color:#fff;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.carousel-btn{
+    position:absolute;
+    top:45%;
+    transform:translateY(-50%);
+    width:56px;
+    height:56px;
+    border:none;
+    border-radius:50%;
+    background:#4b1770;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 12px 22px rgba(0,0,0,.18);
+    transition:.3s ease;
+    z-index:15;
+}
+
+.carousel-btn:hover{
+    background:#c89b2d;
+    color:#341052;
+}
+
+.carousel-btn.prev{left:0}
+.carousel-btn.next{right:0}
+
+.carousel-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:26px;
+}
+
+.carousel-dots .dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#d5c7e6;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.carousel-dots .dot.active{background:#4b1770}
+
+.poster-lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(18,8,28,.88);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    opacity:0;
+    visibility:hidden;
+    transition:.25s ease;
+    z-index:9999;
+}
+
+.poster-lightbox.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.poster-lightbox-content{
+    position:relative;
+    max-width:900px;
+    width:100%;
+}
+
+.poster-lightbox-content img{
+    width:100%;
+    max-height:88vh;
+    object-fit:contain;
+    display:block;
+    border-radius:22px;
+    border:6px solid #c89b2d;
+    background:#fff;
+    box-shadow:0 25px 55px rgba(0,0,0,.35);
+}
+
+.close-lightbox{
+    position:absolute;
+    top:-18px;
+    right:-18px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#ffffff;
+    color:#341052;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+footer{
+    background:linear-gradient(135deg,#2d0947,#4d1773);
+    color:#fff;
+    text-align:center;
+    padding:46px 20px 35px;
+    border-top:5px solid #c89b2d;
+}
+
+footer h3{
+    font-family:'Cinzel', serif;
+    color:#e7c86f;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.motto{
+    font-size:34px;
+    margin-bottom:28px;
+}
+
+.contact{
+    font-size:34px;
+    margin-bottom:24px;
+}
+
+.contact i{
+    color:#25D366;
+    margin-right:10px;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.socials a{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:2px solid #e7c86f;
+    color:#e7c86f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:24px;
+    transition:.3s;
+}
+
+.socials a:hover{
+    background:#e7c86f;
+    color:#341052;
+}
+
+@media(max-width:1100px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:26px;
+    }
+
+    .hero-middle{order:2}
+    .hero-right{order:3}
+
+    .founder-wrap{
+        flex-direction:column;
+    }
+
+    .founder-info{
+        text-align:center;
+    }
+
+    .founder-line{
+        margin:12px auto 0;
+    }
+
+    .founder-wrap img{width:420px}
+    .scripture-card{max-width:420px}
+
+    .welcome{font-size:82px}
+    .home{font-size:112px}
+    .subheading{font-size:42px}
+    .subheading span{font-size:45px}
+    .vision{font-size:22px;margin:0 auto}
+    .contact{font-size:28px}
+
+    .events-heading h2{font-size:44px}
+    .events-heading p{font-size:18px}
+
+    .event-card{
+        flex:0 0 calc(50% - 14px);
+        min-width:calc(50% - 14px);
+    }
+
+    .event-thumb{height:360px}
+    .hover-preview{display:none}
+}
+
+@media(max-width:700px){
+    header h1{font-size:38px}
+    header h1 span{font-size:24px}
+
+    .month-banner{margin:8px 0 6px}
+
+    .nav-buttons a{
+        min-width:150px;
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+    .hero{
+        padding:30px 20px 45px;
+        gap:22px;
+    }
+
+    .founder-wrap img{width:310px}
+    .founder-name{font-size:26px}
+    .founder-title{font-size:30px}
+
+    .scripture-card{
+        max-width:100%;
+        padding:24px 18px;
+    }
+
+    .scripture-main{font-size:24px}
+    .scripture-script{font-size:40px}
+    .scripture-good{font-size:48px}
+
+    .welcome{font-size:58px}
+    .home{font-size:78px}
+    .subheading{font-size:28px}
+    .subheading span{font-size:32px}
+    .vision{font-size:18px}
+
+    .motto{font-size:22px}
+    .contact{font-size:22px}
+
+    .events-section{padding:25px 20px 60px}
+    .events-heading h2{font-size:34px}
+    .events-heading p{font-size:16px}
+    .events-carousel-wrap{padding:10px 48px 0}
+
+    .event-card{
+        flex:0 0 100%;
+        min-width:100%;
+    }
+
+    .event-thumb{
+        height:420px;
+        border-radius:28px;
+    }
+
+    .placeholder-box{font-size:30px}
+
+    .carousel-btn{
+        width:46px;
+        height:46px;
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+<div class="top-shape"></div>
+<div class="gold-splash"></div>
+
+<header>
+    <img src="images/logo.png" alt="Women of Purpose Logo">
+    <h1>WOMEN <span>of</span><br>PURPOSE</h1>
+</header>
+
+<section class="month-banner" onclick="openPoster('images/Awakening.png','Awakening Banner')">
+    <img src="images/Awakening.png" alt="Awakening Banner">
+</section>
+
+<nav class="nav-buttons">
+    <a href="our-journey.html"><i class="fas fa-road"></i> Our Journey</a>
+    <a href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
+    <a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
+    <a href="connect.html"><i class="far fa-heart"></i> Connect</a>
+</nav>
+
+<section class="hero">
+<div class="hero-left">
+    <div class="welcome">Welcome</div>
+    <div class="home">HOME</div>
+    <div class="subheading">
+        WOMAN <span>of</span> PURPOSE
+    </div>
+    <div class="vision">
+        We exist to inspire women to discover their purpose, grow in faith, and make a greater impact in their world.
+    </div>
+</div>
+
+<div class="hero-middle">
+    <div class="scripture-card">
+        <div class="scripture-top">❧ ♡ ❧</div>
+        <div class="scripture-main">
+            For we are
+            <span class="scripture-script">God’s workmanship,</span>
+            created in Christ Jesus<br>
+            to do
+            <span class="scripture-good">good works,</span>
+            which God prepared<br>
+            in advance for us to do.
+        </div>
+        <div class="scripture-bottom">❧ ♡ ❧</div>
+        <div class="scripture-ref">EPHESIANS 2:10</div>
+    </div>
+</div>
+
+<div class="hero-right">
+    <div class="founder-wrap">
+        <img src="images/founder.png" alt="Pastor Amelia Quansah Founder">
+        <div class="founder-info">
+            <div class="founder-name">Pastor<br>Amelia<br>Quansah</div>
+            <div class="founder-line"></div>
+            <div class="founder-title">Founder</div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="events-section" id="events">
+    <div class="events-heading">
+        <h2>Upcoming Events</h2>
+        <p>Hover over a flyer to preview it, or click to open the full poster.</p>
+    </div>
+
+    <div class="events-carousel-wrap">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous events">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="events-viewport">
+            <div class="events-track" id="eventsTrack">
+
+                <div class="event-card">
+                    <div class="hover-preview">
+                        <img src="images/9Days.png" alt="9 Days Praying in Tongues Full Poster">
+                    </div>
+                    <div class="event-thumb" onclick="openPoster('images/9Days.png','9 Days Praying in Tongues')">
+                        <img src="images/9Days.png" alt="9 Days Praying in Tongues">
+                    </div>
+                    <div class="event-name">9 Days Praying in Tongues</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="hover-preview">
+                        <img src="images/Realtalk1.png" alt="Real Talk Full Poster">
+                    </div>
+                    <div class="event-thumb" onclick="openPoster('images/Realtalk1.png','Real Talk')">
+                        <img src="images/Realtalk1.png" alt="Real Talk">
+                    </div>
+                    <div class="event-name">Real Talk</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="hover-preview">
+                        <img src="images/prayerdrops.png" alt="Prayer Drops Full Poster">
+                    </div>
+                    <div class="event-thumb" onclick="openPoster('images/prayerdrops.png','Prayer Drops')">
+                        <img src="images/prayerdrops.png" alt="Prayer Drops">
+                    </div>
+                    <div class="event-name">Prayer Drops</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-thumb">
+                        <div class="placeholder-box">Coming Soon</div>
+                    </div>
+                    <div class="event-name">Upcoming Event</div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next events">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+</section>
+
+<footer>
+    <h3>OUR MOTTO</h3>
+
+    <div class="motto">
+        I PRAY. I ALIGN. I WALK IN MY PURPOSE.
+    </div>
+
+    <div class="contact">
+        <i class="fab fa-whatsapp"></i>
+        +233(0)24 624 2700
+    </div>
+
+    <div class="socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+</div>
+
+<div class="poster-lightbox" id="posterLightbox">
+    <div class="poster-lightbox-content">
+        <button class="close-lightbox" onclick="closePoster()" aria-label="Close poster">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightboxImage" src="" alt="Event Poster">
+    </div>
+</div>
+
+<script>
+const track = document.getElementById('eventsTrack');
+const cards = document.querySelectorAll('.event-card');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const dotsWrap = document.getElementById('carouselDots');
+
+let currentIndex = 0;
+let autoSlide;
+
+function getCardsPerView(){
+    if(window.innerWidth <= 700) return 1;
+    if(window.innerWidth <= 1100) return 2;
+    return 4;
+}
+
+function getMaxIndex(){
+    return Math.max(cards.length - getCardsPerView(), 0);
+}
+
+function buildDots(){
+    dotsWrap.innerHTML = '';
+    const totalDots = getMaxIndex() + 1;
+
+    for(let i = 0; i < totalDots; i++){
+        const dot = document.createElement('span');
+        dot.className = 'dot' + (i === currentIndex ? ' active' : '');
+
+        dot.addEventListener('click', function(){
+            currentIndex = i;
+            updateCarousel();
+            restartAutoSlide();
+        });
+
+        dotsWrap.appendChild(dot);
+    }
+}
+
+function updateDots(){
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(function(dot, i){
+        dot.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function updateCarousel(){
+    if(cards.length === 0) return;
+
+    const firstCard = cards[0];
+    const cardStyle = window.getComputedStyle(track);
+    const gap = parseInt(cardStyle.columnGap || cardStyle.gap || 28, 10);
+    const moveAmount = firstCard.offsetWidth + gap;
+
+    if(currentIndex > getMaxIndex()){
+        currentIndex = 0;
+    }
+
+    track.style.transform = `translateX(-${currentIndex * moveAmount}px)`;
+
+    buildDots();
+    updateDots();
+}
+
+function nextSlide(){
+    if(currentIndex >= getMaxIndex()){
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+
+    updateCarousel();
+}
+
+function prevSlide(){
+    if(currentIndex <= 0){
+        currentIndex = getMaxIndex();
+    } else {
+        currentIndex--;
+    }
+
+    updateCarousel();
+}
+
+prevBtn.addEventListener('click', function(){
+    prevSlide();
+    restartAutoSlide();
+});
+
+nextBtn.addEventListener('click', function(){
+    nextSlide();
+    restartAutoSlide();
+});
+
+function startAutoSlide(){
+    autoSlide = setInterval(function(){
+        nextSlide();
+    }, 4500);
+}
+
+function restartAutoSlide(){
+    clearInterval(autoSlide);
+    startAutoSlide();
+}
+
+window.addEventListener('resize', function(){
+    currentIndex = 0;
+    updateCarousel();
+});
+
+updateCarousel();
+startAutoSlide();
+
+function openPoster(src, altText){
+    document.getElementById('lightboxImage').src = src;
+    document.getElementById('lightboxImage').alt = altText;
+    document.getElementById('posterLightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePoster(){
+    document.getElementById('posterLightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('posterLightbox').addEventListener('click', function(e){
+    if(e.target === this){
+        closePoster();
+    }
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+        closePoster();
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect | Women of Purpose</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#ffffff;
+    color:#2d1247;
+    margin:0;
+}
+
+header{
+    text-align:center;
+    padding:30px 20px;
+}
+
+header img{
+    width:140px;
+}
+
+header h1{
+    font-family:'Cinzel', serif;
+    font-size:48px;
+    color:#341052;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.nav-buttons a{
+    padding:12px 22px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    text-decoration:none;
+    color:#341052;
+    font-weight:600;
+}
+
+.connect-section{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    padding:30px 20px 60px;
+}
+
+.connect-title{
+    font-family:'Great Vibes', cursive;
+    font-size:60px;
+    color:#b88920;
+}
+
+.connect-text{
+    font-size:18px;
+    line-height:1.8;
+    margin:20px 0 20px;
+}
+
+.connect-text.second{
+    margin-top:10px;
+}
+
+.email-highlight{
+    color:#4b1770;
+    font-weight:700;
+}
+
+.contact-icons{
+    display:flex;
+    justify-content:center;
+    margin:35px 0 40px;
+}
+
+.contact-icons a{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:3px solid #c89b2d;
+    color:#c89b2d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.contact-icons a:hover{
+    background:#c89b2d;
+    color:#341052;
+    transform:scale(1.05);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border-radius:10px;
+    border:2px solid #e5d9a8;
+    font-size:15px;
+    font-family:'Montserrat', sans-serif;
+}
+
+.contact-form textarea{
+    height:120px;
+    resize:none;
+}
+
+.contact-form button{
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:#4b1770;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    font-family:'Montserrat', sans-serif;
+}
+
+.contact-form button:hover{
+    background:#c89b2d;
+    color:#341052;
+}
+
+.note{
+    margin-top:15px;
+    font-size:14px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="images/logo.png" alt="Logo">
+    <h1>Women of Purpose</h1>
+</header>
+
+<nav class="nav-buttons">
+    <a href="index.html">Home</a>
+    <a href="our-journey.html">Our Journey</a>
+    <a href="connect.html">Connect</a>
+</nav>
+
+<section class="connect-section">
+
+    <div class="connect-title">Connect</div>
+
+    <div class="connect-text">
+        Whether you have a prayer request, a ministry invitation, a collaboration enquiry, or would simply like to learn more about Women of Purpose, we would love to hear from you. You can get in touch via WhatsApp by clicking the icon below, or email us at 
+        <span class="email-highlight">wopurposegh@gmail.com</span>.
+    </div>
+
+    <div class="connect-text second">
+        If you’re interested in joining us, it’s simple! Just send us a WhatsApp message by clicking the icon, and we’ll be happy to share more information with you.
+    </div>
+
+    <div class="contact-icons">
+        <a href="https://wa.me/233246242700?text=Hello%20Women%20of%20Purpose%2C%20I%20would%20like%20to%20connect%20with%20you." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <form class="contact-form" action="mailto:wopurposegh@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="contact" placeholder="Your Contact">
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send via Email</button>
+    </form>
+
+    <div class="note">
+        Clicking send will open your email app.
+    </div>
+
+</section>
+
+</body>
+</html>
