@@ -1,5 +1,5 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -118,7 +118,7 @@ header h1 span{
 
 .events-title{
     font-family:'Cinzel', serif;
-    font-size:48px;
+    font-size:52px;
     color:#341052;
     margin-bottom:10px;
 }
@@ -126,119 +126,24 @@ header h1 span{
 .events-subtitle{
     font-size:20px;
     color:#5a476d;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
-.carousel-wrapper{
-    max-width:1200px;
+.event-poster-wrap{
+    max-width:1050px;
     margin:0 auto;
-    position:relative;
-    overflow:hidden;
-    padding:10px 50px 30px;
+    padding:16px;
+    background:#fffaf0;
+    border:4px solid #c89b2d;
+    border-radius:28px;
+    box-shadow:0 18px 40px rgba(54,21,84,0.18);
 }
 
-.carousel-track{
-    display:flex;
-    transition:transform 0.6s ease-in-out;
-}
-
-.event-slide{
-    min-width:25%;
-    padding:10px 15px;
-    display:flex;
-    justify-content:center;
-}
-
-.event-box{
-    text-align:center;
+.event-poster-wrap img{
     width:100%;
-}
-
-.event-circle{
-    width:240px;
-    height:240px;
-    margin:0 auto;
-    border-radius:50%;
-    overflow:hidden;
-    border:6px solid #c89b2d;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.event-circle img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    height:auto;
     display:block;
-}
-
-.placeholder{
-    background:linear-gradient(135deg,#4b1770,#7b2cbf);
-    color:#fff;
-    font-weight:700;
-    font-size:20px;
-    line-height:1.4;
-    padding:20px;
-    text-align:center;
-}
-
-.event-box h3{
-    margin-top:16px;
-    font-size:19px;
-    color:#341052;
-}
-
-.carousel-btn{
-    position:absolute;
-    top:45%;
-    transform:translateY(-50%);
-    width:46px;
-    height:46px;
-    border:none;
-    border-radius:50%;
-    background:#4b1770;
-    color:#fff;
-    font-size:20px;
-    cursor:pointer;
-    z-index:10;
-    box-shadow:0 8px 18px rgba(0,0,0,.18);
-    transition:.3s ease;
-}
-
-.carousel-btn:hover{
-    background:#c89b2d;
-    color:#341052;
-}
-
-.carousel-btn.prev{
-    left:0;
-}
-
-.carousel-btn.next{
-    right:0;
-}
-
-.carousel-dots{
-    margin-top:10px;
-    display:flex;
-    justify-content:center;
-    gap:10px;
-}
-
-.dot{
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#d7c8e6;
-    cursor:pointer;
-    transition:.3s ease;
-}
-
-.dot.active{
-    background:#4b1770;
+    border-radius:20px;
 }
 
 footer{
@@ -299,24 +204,6 @@ footer h3{
     color:#341052;
 }
 
-@media(max-width:1100px){
-    .event-slide{
-        min-width:50%;
-    }
-
-    .events-title{
-        font-size:40px;
-    }
-
-    .motto{
-        font-size:24px;
-    }
-
-    .contact{
-        font-size:28px;
-    }
-}
-
 @media(max-width:700px){
     header h1{
         font-size:38px;
@@ -333,24 +220,20 @@ footer h3{
     }
 
     .events-title{
-        font-size:30px;
+        font-size:34px;
     }
 
     .events-subtitle{
         font-size:16px;
     }
 
-    .carousel-wrapper{
-        padding:10px 40px 30px;
+    .event-poster-wrap{
+        padding:8px;
+        border-radius:18px;
     }
 
-    .event-slide{
-        min-width:100%;
-    }
-
-    .event-circle{
-        width:220px;
-        height:220px;
+    .event-poster-wrap img{
+        border-radius:12px;
     }
 
     .motto{
@@ -362,8 +245,8 @@ footer h3{
     }
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -378,173 +261,42 @@ footer h3{
 
 <nav class="nav-buttons">
     <a href="index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="#"><i class="fas fa-users"></i> Join Us</a>
+    <a href="our-journey.html"><i class="fas fa-road"></i> Our Journey</a>
     <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
-    <a href="#"><i class="fas fa-comment-dots"></i> Testimonies</a>
-    <a href="#"><i class="far fa-heart"></i> Connect</a>
+    <a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
+    <a href="connect.html"><i class="far fa-heart"></i> Connect</a>
 </nav>
 
 <section class="events-section">
     <h2 class="events-title">Upcoming Events</h2>
     <p class="events-subtitle">Stay connected and join our upcoming programmes.</p>
 
-```
-<div class="carousel-wrapper">
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">
-        <i class="fas fa-chevron-left"></i>
-    </button>
-
-    <div class="carousel-track" id="carouselTrack">
-        <div class="event-slide">
-            <div class="event-box">
-                <div class="event-circle">
-                    <img src="images/9Days.png" alt="9 Days Praying in Tongues">
-                </div>
-                <h3>9 Days Praying in Tongues</h3>
-            </div>
-        </div>
-
-        <div class="event-slide">
-            <div class="event-box">
-                <div class="event-circle">
-                    <img src="images/Realtalk1.png" alt="Real Talk">
-                </div>
-                <h3>Real Talk</h3>
-            </div>
-        </div>
-
-        <div class="event-slide">
-            <div class="event-box">
-                <div class="event-circle">
-                    <img src="images/prayerdrops.png" alt="Prayer Drops">
-                </div>
-                <h3>Prayer Drops</h3>
-            </div>
-        </div>
-
-        <div class="event-slide">
-            <div class="event-box">
-                <div class="event-circle placeholder">
-                    Coming<br>Soon
-                </div>
-                <h3>Upcoming Event</h3>
-            </div>
-        </div>
+    <div class="event-poster-wrap">
+        <img src="images/upcoming-dates.png" alt="Women of Purpose Upcoming Dates">
     </div>
-
-    <button class="carousel-btn next" onclick="moveSlide(1)">
-        <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <div class="carousel-dots" id="carouselDots">
-        <span class="dot active" onclick="goToSlide(0)"></span>
-        <span class="dot" onclick="goToSlide(1)"></span>
-        <span class="dot" onclick="goToSlide(2)"></span>
-        <span class="dot" onclick="goToSlide(3)"></span>
-    </div>
-</div>
-```
-
 </section>
 
 <footer>
     <h3>OUR MOTTO</h3>
 
-```
-<div class="motto">
-    I PRAY. I ALIGN. I WALK IN MY PURPOSE.
-</div>
+    <div class="motto">
+        I PRAY. I ALIGN. I WALK IN MY PURPOSE.
+    </div>
 
-<div class="contact">
-    <i class="fab fa-whatsapp"></i>
-    +233(0)24 624 2700
-</div>
+    <div class="contact">
+        <i class="fab fa-whatsapp"></i>
+        +233(0)24 624 2700
+    </div>
 
-<div class="socials">
-    <a href="#"><i class="fab fa-youtube"></i></a>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-</div>
-```
-
+    <div class="socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
 </footer>
 
 </div>
 
-<script>
-const track = document.getElementById('carouselTrack');
-const dots = document.querySelectorAll('.dot');
-const slides = document.querySelectorAll('.event-slide');
-
-let currentIndex = 0;
-let autoSlide;
-
-function getVisibleSlides() {
-    if (window.innerWidth <= 700) return 1;
-    if (window.innerWidth <= 1100) return 2;
-    return 4;
-}
-
-function updateCarousel() {
-    const visibleSlides = getVisibleSlides();
-    const maxIndex = Math.max(slides.length - visibleSlides, 0);
-
-    if (currentIndex > maxIndex) {
-        currentIndex = 0;
-    }
-
-    const slideWidth = slides[0].offsetWidth;
-    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[currentIndex]) {
-        dots[currentIndex].classList.add('active');
-    }
-}
-
-function moveSlide(direction) {
-    const visibleSlides = getVisibleSlides();
-    const maxIndex = Math.max(slides.length - visibleSlides, 0);
-
-    currentIndex += direction;
-
-    if (currentIndex > maxIndex) {
-        currentIndex = 0;
-    }
-
-    if (currentIndex < 0) {
-        currentIndex = maxIndex;
-    }
-
-    updateCarousel();
-    resetAutoSlide();
-}
-
-function goToSlide(index) {
-    const visibleSlides = getVisibleSlides();
-    const maxIndex = Math.max(slides.length - visibleSlides, 0);
-
-    currentIndex = Math.min(index, maxIndex);
-    updateCarousel();
-    resetAutoSlide();
-}
-
-function startAutoSlide() {
-    autoSlide = setInterval(() => {
-        moveSlide(1);
-    }, 4000);
-}
-
-function resetAutoSlide() {
-    clearInterval(autoSlide);
-    startAutoSlide();
-}
-
-window.addEventListener('resize', updateCarousel);
-
-updateCarousel();
-startAutoSlide();
-</script>
-
 </body>
 </html>
+```
