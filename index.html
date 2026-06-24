@@ -104,7 +104,6 @@ header h1 span{
     transform:translateY(-3px);
 }
 
-/* HERO */
 .hero{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -165,11 +164,10 @@ header h1 span{
     box-shadow:0 18px 40px rgba(54,21,84,0.18);
 }
 
-/* SCRIPTURE AND FOUNDER */
 .scripture-founder-section{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:30px;
+    grid-template-columns:1fr 1.3fr 1fr;
+    gap:34px;
     align-items:center;
     padding:20px 6% 70px;
     position:relative;
@@ -182,53 +180,57 @@ header h1 span{
 
 .wop-head img{
     width:100%;
-    max-width:360px;
+    max-width:330px;
 }
 
 .scripture-card{
     width:100%;
-    max-width:390px;
+    max-width:560px;
     margin:auto;
     text-align:center;
-    padding:28px 24px;
+    padding:32px 30px;
     border-left:2px solid #d6ad45;
     border-right:2px solid #d6ad45;
     background:linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,248,230,.75));
+    overflow:visible;
 }
 
 .scripture-top,
 .scripture-bottom{
     font-family:'Cinzel', serif;
     color:#b88920;
-    font-size:22px;
-    letter-spacing:6px;
+    font-size:20px;
+    letter-spacing:5px;
     margin:6px 0 12px;
 }
 
 .scripture-main{
     font-family:'Cinzel', serif;
-    font-size:28px;
+    font-size:clamp(20px, 2.5vw, 30px);
     line-height:1.35;
     color:#341052;
     font-weight:700;
+    overflow-wrap:break-word;
 }
 
 .scripture-script{
     font-family:'Great Vibes', cursive;
-    font-size:46px;
+    font-size:clamp(36px, 4.8vw, 56px);
     color:#b88920;
-    line-height:1;
+    line-height:1.1;
     display:block;
-    margin:4px 0;
+    margin:6px 0;
+    white-space:normal;
 }
 
 .scripture-good{
     font-family:'Great Vibes', cursive;
-    font-size:56px;
+    font-size:clamp(40px, 5.4vw, 64px);
     color:#341052;
-    line-height:1;
+    line-height:1.1;
     display:block;
-    margin:8px 0;
+    margin:10px 0;
+    white-space:normal;
 }
 
 .scripture-ref{
@@ -286,7 +288,6 @@ header h1 span{
     margin:12px 0 0;
 }
 
-/* ABOUT HOME */
 .about-home{
     position:relative;
     z-index:5;
@@ -364,139 +365,27 @@ header h1 span{
     margin-top:30px;
 }
 
-/* EVENTS */
-.events-section{
+.video-section{
+    padding:20px 6% 80px;
     position:relative;
     z-index:5;
-    padding:35px 6% 50px;
 }
 
-.events-heading{
+.video-heading{
     text-align:center;
     margin-bottom:34px;
 }
 
-.events-heading h2{
+.video-heading h2{
     font-family:'Cinzel', serif;
     font-size:54px;
     color:#341052;
     margin-bottom:10px;
 }
 
-.events-heading p{
+.video-heading p{
     font-size:22px;
     color:#5c4d70;
-}
-
-.events-carousel-wrap{
-    position:relative;
-    max-width:1400px;
-    margin:0 auto;
-    padding:10px 70px 0;
-}
-
-.events-viewport{overflow:hidden}
-
-.events-track{
-    display:flex;
-    gap:28px;
-    transition:transform .55s ease;
-    will-change:transform;
-}
-
-.event-card{
-    flex:0 0 calc(25% - 21px);
-    min-width:calc(25% - 21px);
-    position:relative;
-}
-
-.event-thumb{
-    position:relative;
-    width:100%;
-    height:380px;
-    border-radius:34px;
-    overflow:hidden;
-    border:6px solid #c89b2d;
-    background:#ffffff;
-    box-shadow:0 18px 35px rgba(54,21,84,0.14);
-    cursor:pointer;
-    transition:.3s ease;
-}
-
-.event-thumb:hover{
-    transform:translateY(-8px) scale(1.02);
-}
-
-.event-thumb img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.event-name{
-    text-align:center;
-    margin-top:16px;
-    font-size:18px;
-    font-weight:700;
-    color:#341052;
-}
-
-.placeholder-box{
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:26px;
-    background:linear-gradient(135deg,#4b1770,#7b2cbf);
-    color:#fff;
-    font-size:34px;
-    font-weight:700;
-}
-
-.carousel-btn{
-    position:absolute;
-    top:45%;
-    transform:translateY(-50%);
-    width:56px;
-    height:56px;
-    border:none;
-    border-radius:50%;
-    background:#4b1770;
-    color:#fff;
-    font-size:22px;
-    cursor:pointer;
-    z-index:15;
-}
-
-.carousel-btn.prev{left:0}
-.carousel-btn.next{right:0}
-
-.carousel-dots{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:26px;
-}
-
-.carousel-dots .dot{
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#d5c7e6;
-    cursor:pointer;
-}
-
-.carousel-dots .dot.active{
-    background:#4b1770;
-}
-
-/* VIDEO SECTION */
-.video-section{
-    padding:20px 6% 80px;
-    position:relative;
-    z-index:5;
 }
 
 .video-grid{
@@ -532,54 +421,6 @@ header h1 span{
     font-weight:700;
     color:#341052;
     font-size:18px;
-}
-
-/* LIGHTBOX */
-.poster-lightbox{
-    position:fixed;
-    inset:0;
-    background:rgba(18,8,28,.88);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:30px;
-    opacity:0;
-    visibility:hidden;
-    transition:.25s ease;
-    z-index:9999;
-}
-
-.poster-lightbox.active{
-    opacity:1;
-    visibility:visible;
-}
-
-.poster-lightbox-content{
-    position:relative;
-    max-width:900px;
-    width:100%;
-}
-
-.poster-lightbox-content img{
-    width:100%;
-    max-height:88vh;
-    object-fit:contain;
-    border-radius:22px;
-    border:6px solid #c89b2d;
-}
-
-.close-lightbox{
-    position:absolute;
-    top:-18px;
-    right:-18px;
-    width:48px;
-    height:48px;
-    border:none;
-    border-radius:50%;
-    background:#fff;
-    color:#341052;
-    font-size:22px;
-    cursor:pointer;
 }
 
 footer{
@@ -619,14 +460,28 @@ footer h3{
 }
 
 @media(max-width:1100px){
-.hero{grid-template-columns:1fr;text-align:center}
-.hero-text{margin:auto}
-.scripture-founder-section{grid-template-columns:1fr}
-.video-grid{grid-template-columns:1fr 1fr}
-.event-card{flex:0 0 calc(50% - 14px);min-width:calc(50% - 14px)}
-.founder-wrap{flex-direction:column}
-.founder-info{text-align:center}
-.founder-line{margin:12px auto 0}
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+.hero-text{
+    margin:auto;
+}
+.scripture-founder-section{
+    grid-template-columns:1fr;
+}
+.video-grid{
+    grid-template-columns:1fr 1fr;
+}
+.founder-wrap{
+    flex-direction:column;
+}
+.founder-info{
+    text-align:center;
+}
+.founder-line{
+    margin:12px auto 0;
+}
 }
 
 @media(max-width:700px){
@@ -638,13 +493,25 @@ header h1 span{font-size:26px}
 .subheading span{font-size:40px}
 .vision{font-size:20px}
 .video-grid{grid-template-columns:1fr}
-.event-card{flex:0 0 100%;min-width:100%}
 .about-script{font-size:50px}
 .about-title{font-size:34px}
 .core-scripture{font-size:18px}
 .about-text p{font-size:17px}
 .about-final{font-size:20px}
-.events-carousel-wrap{padding:10px 45px 0}
+.video-heading h2{font-size:38px}
+.scripture-card{
+    max-width:94vw;
+    padding:28px 18px;
+}
+.scripture-main{
+    font-size:24px;
+}
+.scripture-script{
+    font-size:42px;
+}
+.scripture-good{
+    font-size:48px;
+}
 }
 </style>
 </head>
@@ -663,7 +530,6 @@ header h1 span{font-size:26px}
 <nav class="nav-buttons">
 <a href="index.html"><i class="fas fa-home"></i> Home</a>
 <a href="our-journey.html"><i class="fas fa-road"></i> Our Journey</a>
-<a href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
 <a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
 <a href="connect.html"><i class="far fa-heart"></i> Connect</a>
 </nav>
@@ -756,55 +622,12 @@ Discover Your Purpose. Develop Your Potential. Transform Your Community.
 </div>
 </section>
 
-<section class="events-section" id="events">
-<div class="events-heading">
-<h2>Upcoming Events</h2>
-<p>Click a flyer to open the full poster.</p>
-</div>
-
-<div class="events-carousel-wrap">
-<button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-
-<div class="events-viewport">
-<div class="events-track" id="eventsTrack">
-
-<div class="event-card">
-<div class="event-thumb" onclick="openPoster('images/9Days.png')">
-<img src="images/9Days.png" alt="9 Days Praying in Tongues">
-</div>
-<div class="event-name">9 Days Praying in Tongues</div>
-</div>
-
-<div class="event-card">
-<div class="event-thumb" onclick="openPoster('images/Realtalk1.png')">
-<img src="images/Realtalk1.png" alt="Real Talk">
-</div>
-<div class="event-name">Real Talk</div>
-</div>
-
-<div class="event-card">
-<div class="event-thumb" onclick="openPoster('images/prayerdrops.png')">
-<img src="images/prayerdrops.png" alt="Prayer Drops">
-</div>
-<div class="event-name">Prayer Drops</div>
-</div>
-
-<div class="event-card">
-<div class="event-thumb">
-<div class="placeholder-box">Coming Soon</div>
-</div>
-<div class="event-name">Upcoming Event</div>
-</div>
-
-</div>
-</div>
-
-<button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-<div class="carousel-dots" id="carouselDots"></div>
-</div>
-</section>
-
 <section class="video-section">
+<div class="video-heading">
+<h2>Videos</h2>
+<p>Watch messages, teachings and moments from Women of Purpose Global.</p>
+</div>
+
 <div class="video-grid">
 
 <div class="video-box">
@@ -838,79 +661,6 @@ Discover Your Purpose. Develop Your Potential. Transform Your Community.
 </footer>
 
 </div>
-
-<div class="poster-lightbox" id="posterLightbox">
-<div class="poster-lightbox-content">
-<button class="close-lightbox" onclick="closePoster()"><i class="fas fa-times"></i></button>
-<img id="lightboxImage" src="" alt="Poster">
-</div>
-</div>
-
-<script>
-const track=document.getElementById('eventsTrack');
-const cards=document.querySelectorAll('.event-card');
-const prevBtn=document.getElementById('prevBtn');
-const nextBtn=document.getElementById('nextBtn');
-const dotsWrap=document.getElementById('carouselDots');
-
-let currentIndex=0;
-
-function getCardsPerView(){
-if(window.innerWidth<=700)return 1;
-if(window.innerWidth<=1100)return 2;
-return 4;
-}
-
-function getMaxIndex(){
-return Math.max(cards.length-getCardsPerView(),0);
-}
-
-function buildDots(){
-dotsWrap.innerHTML='';
-for(let i=0;i<=getMaxIndex();i++){
-const dot=document.createElement('span');
-dot.className='dot'+(i===currentIndex?' active':'');
-dot.onclick=()=>{currentIndex=i;updateCarousel();}
-dotsWrap.appendChild(dot);
-}
-}
-
-function updateCarousel(){
-const gap=28;
-const move=cards[0].offsetWidth+gap;
-track.style.transform=`translateX(-${currentIndex*move}px)`;
-buildDots();
-}
-
-nextBtn.onclick=()=>{
-currentIndex=currentIndex>=getMaxIndex()?0:currentIndex+1;
-updateCarousel();
-};
-
-prevBtn.onclick=()=>{
-currentIndex=currentIndex<=0?getMaxIndex():currentIndex-1;
-updateCarousel();
-};
-
-window.addEventListener('resize',updateCarousel);
-updateCarousel();
-
-function openPoster(src){
-document.getElementById('lightboxImage').src=src;
-document.getElementById('posterLightbox').classList.add('active');
-document.body.style.overflow='hidden';
-}
-
-function closePoster(){
-document.getElementById('posterLightbox').classList.remove('active');
-document.body.style.overflow='';
-}
-
-document.getElementById('posterLightbox').onclick=function(e){
-if(e.target===this)closePoster();
-};
-</script>
-
 </body>
 </html>
 ```
