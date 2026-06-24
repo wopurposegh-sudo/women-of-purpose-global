@@ -2,256 +2,914 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Journey | Women of Purpose Global</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women of Purpose Global</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #222;
-      font-family: 'Poppins', sans-serif;
-    }
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#ffffff;
+    color:#2d1247;
+    overflow-x:hidden;
+}
 
-    .journey-page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 70px 25px;
-    }
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
 
-    .main-title {
-      font-family: 'Cormorant Garamond', serif;
-      color: #35105c;
-      font-size: 4.8rem;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin: 0 0 20px;
-      text-transform: uppercase;
-    }
+.top-shape{
+    position:absolute;
+    top:0;
+    left:0;
+    width:340px;
+    height:230px;
+    background:linear-gradient(135deg,#3e0d68,#6f2da8);
+    border-bottom-right-radius:220px;
+    z-index:0;
+}
 
-    .gold-line {
-      width: 90px;
-      height: 3px;
-      background: #bd861c;
-      margin: 15px auto 40px;
-    }
+.gold-splash{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+    height:220px;
+    background:linear-gradient(135deg,#f7e49a,#c79b2a);
+    clip-path:polygon(28% 0%,100% 0%,100% 100%,0% 55%);
+    opacity:.85;
+    z-index:0;
+}
 
-    .journey-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-      margin: 0 0 50px;
-    }
+header{
+    text-align:center;
+    padding:28px 20px 10px;
+    position:relative;
+    z-index:5;
+    background:#ffffff;
+}
 
-    .journey-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      min-width: 220px;
-      padding: 18px 30px;
-      border-radius: 50px;
-      background: #f8e18f;
-      border: 3px solid #c99620;
-      color: #35105c;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-    }
+header img{width:145px}
 
-    .journey-btn:hover {
-      background: #35105c;
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
+header h1{
+    font-family:'Cinzel', serif;
+    font-size:52px;
+    line-height:1;
+    color:#341052;
+    margin-top:8px;
+}
 
-    .journey-btn i {
-      font-size: 1.2rem;
-    }
+header h1 span{
+    font-size:34px;
+    font-weight:400;
+}
 
-    .subtitle {
-      max-width: 900px;
-      margin: 0 auto 50px;
-      text-align: center;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      color: #222;
-    }
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    padding:20px;
+    position:relative;
+    z-index:5;
+}
 
-    .content-section {
-      margin-bottom: 35px;
-    }
+.nav-buttons a{
+    text-decoration:none;
+    min-width:180px;
+    padding:14px 26px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    color:#341052;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s ease;
+}
 
-    .content-section p {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      margin-bottom: 22px;
-    }
+.nav-buttons a:hover{
+    background:#4b1770;
+    color:#fff;
+    border-color:#4b1770;
+    transform:translateY(-3px);
+}
 
-    .section-heading {
-      font-family: 'Cormorant Garamond', serif;
-      color: #35105c;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-top: 45px;
-      margin-bottom: 15px;
-    }
+/* HERO */
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+    padding:40px 6% 70px;
+    position:relative;
+    z-index:5;
+}
 
-    .values-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0;
-    }
+.hero-text{
+    max-width:720px;
+}
 
-    .values-list li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 16px;
-      padding-left: 18px;
-      border-left: 4px solid #bd861c;
-    }
+.welcome{
+    font-family:'Great Vibes', cursive;
+    font-size:100px;
+    color:#b88920;
+    line-height:.9;
+}
 
-    .values-list strong {
-      color: #35105c;
-      font-weight: 600;
-    }
+.home{
+    font-family:'Cinzel', serif;
+    font-size:125px;
+    line-height:.9;
+    color:#341052;
+    font-weight:700;
+}
 
-    @media (max-width: 768px) {
-      .journey-page {
-        padding: 50px 20px;
-      }
+.subheading{
+    font-family:'Cinzel', serif;
+    font-size:46px;
+    color:#341052;
+    margin:12px 0 22px;
+}
 
-      .main-title {
-        font-size: 3.2rem;
-      }
+.subheading span{
+    font-family:'Great Vibes', cursive;
+    font-size:58px;
+    color:#b88920;
+}
 
-      .journey-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-        margin-bottom: 45px;
-      }
+.vision{
+    font-size:24px;
+    line-height:1.7;
+    color:#1e1e1e;
+}
 
-      .journey-btn {
-        width: 90%;
-        max-width: 320px;
-      }
+.hero-image{
+    text-align:center;
+}
 
-      .subtitle {
-        font-size: 1.05rem;
-      }
+.hero-image img{
+    width:100%;
+    max-width:560px;
+    border-radius:36px;
+    border:6px solid #c89b2d;
+    box-shadow:0 18px 40px rgba(54,21,84,0.18);
+}
 
-      .section-heading {
-        font-size: 2.1rem;
-      }
+/* SCRIPTURE AND FOUNDER */
+.scripture-founder-section{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:30px;
+    align-items:center;
+    padding:20px 6% 70px;
+    position:relative;
+    z-index:5;
+}
 
-      .content-section p,
-      .values-list li {
-        font-size: 1rem;
-      }
-    }
-  </style>
+.wop-head{
+    text-align:center;
+}
+
+.wop-head img{
+    width:100%;
+    max-width:360px;
+}
+
+.scripture-card{
+    width:100%;
+    max-width:390px;
+    margin:auto;
+    text-align:center;
+    padding:28px 24px;
+    border-left:2px solid #d6ad45;
+    border-right:2px solid #d6ad45;
+    background:linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,248,230,.75));
+}
+
+.scripture-top,
+.scripture-bottom{
+    font-family:'Cinzel', serif;
+    color:#b88920;
+    font-size:22px;
+    letter-spacing:6px;
+    margin:6px 0 12px;
+}
+
+.scripture-main{
+    font-family:'Cinzel', serif;
+    font-size:28px;
+    line-height:1.35;
+    color:#341052;
+    font-weight:700;
+}
+
+.scripture-script{
+    font-family:'Great Vibes', cursive;
+    font-size:46px;
+    color:#b88920;
+    line-height:1;
+    display:block;
+    margin:4px 0;
+}
+
+.scripture-good{
+    font-family:'Great Vibes', cursive;
+    font-size:56px;
+    color:#341052;
+    line-height:1;
+    display:block;
+    margin:8px 0;
+}
+
+.scripture-ref{
+    display:inline-block;
+    margin-top:18px;
+    padding:8px 24px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    font-family:'Cinzel', serif;
+    font-size:16px;
+    font-weight:700;
+    color:#341052;
+    letter-spacing:1px;
+}
+
+.founder-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+}
+
+.founder-wrap img{
+    width:330px;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.founder-info{
+    text-align:left;
+    min-width:150px;
+}
+
+.founder-name{
+    font-family:'Cinzel', serif;
+    font-size:30px;
+    line-height:1.15;
+    font-weight:700;
+    color:#341052;
+}
+
+.founder-title{
+    font-family:'Great Vibes', cursive;
+    color:#b88920;
+    font-size:32px;
+    margin-top:12px;
+}
+
+.founder-line{
+    width:120px;
+    height:2px;
+    background:#c89b2d;
+    margin:12px 0 0;
+}
+
+/* ABOUT HOME */
+.about-home{
+    position:relative;
+    z-index:5;
+    padding:65px 6% 75px;
+    background:linear-gradient(135deg,#fffaf0,#ffffff);
+}
+
+.about-inner{
+    max-width:1120px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.about-script{
+    font-family:'Great Vibes', cursive;
+    color:#b88920;
+    font-size:68px;
+    margin-bottom:-8px;
+}
+
+.about-title{
+    font-family:'Cinzel', serif;
+    color:#341052;
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+.about-line{
+    width:100px;
+    height:3px;
+    background:#c89b2d;
+    margin:0 auto 28px;
+}
+
+.core-scripture{
+    max-width:920px;
+    margin:0 auto 34px;
+    padding:24px 30px;
+    border-left:4px solid #c89b2d;
+    border-right:4px solid #c89b2d;
+    background:#ffffff;
+    color:#341052;
+    font-family:'Cinzel', serif;
+    font-size:21px;
+    line-height:1.6;
+    font-weight:600;
+}
+
+.core-scripture span{
+    display:block;
+    color:#b88920;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.about-text{
+    max-width:980px;
+    margin:0 auto;
+    text-align:left;
+}
+
+.about-text p{
+    font-size:20px;
+    line-height:1.9;
+    color:#1f1f1f;
+    margin-bottom:22px;
+}
+
+.about-final{
+    text-align:center;
+    font-family:'Cinzel', serif;
+    color:#341052;
+    font-size:26px;
+    font-weight:700;
+    margin-top:30px;
+}
+
+/* EVENTS */
+.events-section{
+    position:relative;
+    z-index:5;
+    padding:35px 6% 50px;
+}
+
+.events-heading{
+    text-align:center;
+    margin-bottom:34px;
+}
+
+.events-heading h2{
+    font-family:'Cinzel', serif;
+    font-size:54px;
+    color:#341052;
+    margin-bottom:10px;
+}
+
+.events-heading p{
+    font-size:22px;
+    color:#5c4d70;
+}
+
+.events-carousel-wrap{
+    position:relative;
+    max-width:1400px;
+    margin:0 auto;
+    padding:10px 70px 0;
+}
+
+.events-viewport{overflow:hidden}
+
+.events-track{
+    display:flex;
+    gap:28px;
+    transition:transform .55s ease;
+    will-change:transform;
+}
+
+.event-card{
+    flex:0 0 calc(25% - 21px);
+    min-width:calc(25% - 21px);
+    position:relative;
+}
+
+.event-thumb{
+    position:relative;
+    width:100%;
+    height:380px;
+    border-radius:34px;
+    overflow:hidden;
+    border:6px solid #c89b2d;
+    background:#ffffff;
+    box-shadow:0 18px 35px rgba(54,21,84,0.14);
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.event-thumb:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.event-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.event-name{
+    text-align:center;
+    margin-top:16px;
+    font-size:18px;
+    font-weight:700;
+    color:#341052;
+}
+
+.placeholder-box{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:26px;
+    background:linear-gradient(135deg,#4b1770,#7b2cbf);
+    color:#fff;
+    font-size:34px;
+    font-weight:700;
+}
+
+.carousel-btn{
+    position:absolute;
+    top:45%;
+    transform:translateY(-50%);
+    width:56px;
+    height:56px;
+    border:none;
+    border-radius:50%;
+    background:#4b1770;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:15;
+}
+
+.carousel-btn.prev{left:0}
+.carousel-btn.next{right:0}
+
+.carousel-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:26px;
+}
+
+.carousel-dots .dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#d5c7e6;
+    cursor:pointer;
+}
+
+.carousel-dots .dot.active{
+    background:#4b1770;
+}
+
+/* VIDEO SECTION */
+.video-section{
+    padding:20px 6% 80px;
+    position:relative;
+    z-index:5;
+}
+
+.video-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.video-box{
+    background:#fff;
+    border:6px solid #c89b2d;
+    border-radius:34px;
+    overflow:hidden;
+    box-shadow:0 18px 35px rgba(54,21,84,0.14);
+    transition:.3s ease;
+}
+
+.video-box:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.video-box iframe{
+    width:100%;
+    height:260px;
+    border:none;
+}
+
+.video-title{
+    padding:18px;
+    text-align:center;
+    font-weight:700;
+    color:#341052;
+    font-size:18px;
+}
+
+/* LIGHTBOX */
+.poster-lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(18,8,28,.88);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    opacity:0;
+    visibility:hidden;
+    transition:.25s ease;
+    z-index:9999;
+}
+
+.poster-lightbox.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.poster-lightbox-content{
+    position:relative;
+    max-width:900px;
+    width:100%;
+}
+
+.poster-lightbox-content img{
+    width:100%;
+    max-height:88vh;
+    object-fit:contain;
+    border-radius:22px;
+    border:6px solid #c89b2d;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:-18px;
+    right:-18px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#341052;
+    font-size:22px;
+    cursor:pointer;
+}
+
+footer{
+    background:linear-gradient(135deg,#2d0947,#4d1773);
+    color:#fff;
+    text-align:center;
+    padding:46px 20px 35px;
+    border-top:5px solid #c89b2d;
+}
+
+footer h3{
+    font-family:'Cinzel', serif;
+    color:#e7c86f;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.motto{font-size:34px;margin-bottom:28px}
+.contact{font-size:34px;margin-bottom:24px}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+}
+
+.socials a{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:2px solid #e7c86f;
+    color:#e7c86f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+}
+
+@media(max-width:1100px){
+.hero{grid-template-columns:1fr;text-align:center}
+.hero-text{margin:auto}
+.scripture-founder-section{grid-template-columns:1fr}
+.video-grid{grid-template-columns:1fr 1fr}
+.event-card{flex:0 0 calc(50% - 14px);min-width:calc(50% - 14px)}
+.founder-wrap{flex-direction:column}
+.founder-info{text-align:center}
+.founder-line{margin:12px auto 0}
+}
+
+@media(max-width:700px){
+header h1{font-size:38px}
+header h1 span{font-size:26px}
+.welcome{font-size:76px}
+.home{font-size:92px}
+.subheading{font-size:34px}
+.subheading span{font-size:40px}
+.vision{font-size:20px}
+.video-grid{grid-template-columns:1fr}
+.event-card{flex:0 0 100%;min-width:100%}
+.about-script{font-size:50px}
+.about-title{font-size:34px}
+.core-scripture{font-size:18px}
+.about-text p{font-size:17px}
+.about-final{font-size:20px}
+.events-carousel-wrap{padding:10px 45px 0}
+}
+</style>
 </head>
 
 <body>
+<div class="wrapper">
 
-  <main class="journey-page">
+<div class="top-shape"></div>
+<div class="gold-splash"></div>
 
-    <h1 class="main-title">Our Journey</h1>
-    <div class="gold-line"></div>
+<header>
+<img src="images/logo.png" alt="Women of Purpose Logo">
+<h1>WOMEN <span>of</span><br>PURPOSE</h1>
+</header>
 
-    <div class="journey-buttons">
-      <a href="events.html" class="journey-btn">
-        <i class="fas fa-calendar-alt"></i>
-        Events
-      </a>
+<nav class="nav-buttons">
+<a href="index.html"><i class="fas fa-home"></i> Home</a>
+<a href="our-journey.html"><i class="fas fa-road"></i> Our Journey</a>
+<a href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
+<a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
+<a href="connect.html"><i class="far fa-heart"></i> Connect</a>
+</nav>
 
-      <a href="testimonies.html" class="journey-btn">
-        <i class="fas fa-comment-dots"></i>
-        Testimonies
-      </a>
+<section class="hero">
+<div class="hero-text">
+<div class="welcome">Welcome</div>
+<div class="home">HOME</div>
+<div class="subheading">WOMEN <span>of</span> PURPOSE</div>
+<div class="vision">
+We exist to equip, support, mentor and inspire women and young people to discover their God-given purpose, overcome barriers and walk boldly in the assignments prepared for them.
+</div>
+</div>
 
-      <a href="connect.html" class="journey-btn">
-        <i class="far fa-heart"></i>
-        Connect
-      </a>
-    </div>
+<div class="hero-image">
+<img src="images/women.jpeg" alt="Women of Purpose Global">
+</div>
+</section>
 
-    <p class="subtitle">
-      Empowering women and young people across the UK and Ghana through leadership,
-      wellbeing, mentoring, skills development and community-led programmes since 2007.
-    </p>
+<section class="scripture-founder-section">
 
-    <section class="content-section">
-      <h2 class="section-heading">About Women of Purpose Global</h2>
+<div class="wop-head">
+<img src="images/wophead.png" alt="Women of Purpose">
+</div>
 
-      <p>
-        Women of Purpose Global is a community-led organisation established in the United Kingdom in 2007 and expanded to Ghana in 2010. Since our inception, we have been committed to empowering women and young people through leadership development, mentoring, wellbeing support, skills-building opportunities, and community engagement programmes.
-      </p>
+<div class="scripture-card">
+<div class="scripture-top">❧ ♡ ❧</div>
+<div class="scripture-main">
+For we are
+<span class="scripture-script">God’s workmanship,</span>
+created in Christ Jesus<br>
+to do
+<span class="scripture-good">good works,</span>
+which God prepared<br>
+in advance for us to do.
+</div>
+<div class="scripture-bottom">❧ ♡ ❧</div>
+<div class="scripture-ref">EPHESIANS 2:10</div>
+</div>
 
-      <p>
-        Founded on the belief that every individual has value, purpose, and the ability to create positive change, we work alongside communities to provide safe, inclusive spaces where women and young people can build confidence, develop practical skills, strengthen resilience, and realise their full potential.
-      </p>
+<div class="founder-wrap">
+<img src="images/founder.png" alt="Pastor Amelia Quansah Founder">
+<div class="founder-info">
+<div class="founder-name">Pastor<br>Amelia<br>Quansah</div>
+<div class="founder-line"></div>
+<div class="founder-title">Founder</div>
+</div>
+</div>
 
-      <p>
-        Over the years, Women of Purpose Global has evolved from a grassroots support network into an organisation delivering community-led initiatives that promote personal development, education, employability, social inclusion, health and wellbeing, and leadership growth. Our programmes are shaped by the voices and experiences of the people we serve, ensuring that activities remain relevant, accessible, and impactful.
-      </p>
+</section>
 
-      <p>
-        Youth participation sits at the heart of our work. Through mentoring programmes, leadership development activities, creative projects, workshops, volunteering opportunities, and youth-led community initiatives, we empower young people to become active contributors and future leaders. We believe that young people should not only participate in programmes but also influence, design, and shape them.
-      </p>
+<section class="about-home">
+<div class="about-inner">
 
-      <p>
-        Our approach combines mentoring, peer support, community participation, and collaborative partnerships. We work closely with families, schools, community groups, faith organisations, and local stakeholders to strengthen support systems and create opportunities that improve outcomes for women and young people.
-      </p>
+<div class="about-script">Welcome to</div>
+<h2 class="about-title">Women of Purpose Global</h2>
+<div class="about-line"></div>
 
-      <p>
-        Today, Women of Purpose Global continues to champion empowerment, inclusion, wellbeing, and community transformation across the UK and Ghana. Through our programmes and partnerships, we help women and young people build confidence, develop skills, amplify their voices, and become positive agents of change within their communities.
-      </p>
-    </section>
+<div class="core-scripture">
+“For we are God's workmanship, created in Christ Jesus for good works, which God prepared beforehand that we should walk in them.”
+<span>Ephesians 2:10</span>
+</div>
 
-    <section class="content-section">
-      <h2 class="section-heading">Our Mission</h2>
+<div class="about-text">
+<p>
+At Women of Purpose Global, we believe that every person is created by God with purpose, potential, and value. We believe that each of us is born with unique gifts and talents, and throughout life we are given assignments, opportunities, and experiences that help prepare us for the purpose God has designed for us.
+</p>
 
-      <p>
-        To empower women and young people through mentoring, leadership development, wellbeing support, skills-building opportunities, and community engagement programmes that promote confidence, resilience, inclusion, participation, and positive life outcomes.
-      </p>
-    </section>
+<p>
+However, life's challenges, disappointments, inequalities, and circumstances can often distract, discourage, or prevent people from recognising their worth and pursuing their God-given calling. This is especially true for those living in marginalised and underserved communities, where opportunities and support may be limited.
+</p>
 
-    <section class="content-section">
-      <h2 class="section-heading">Our Vision</h2>
+<p>
+Established in the United Kingdom in 2007 and expanded to Ghana in 2010, Women of Purpose Global exists to equip, support, mentor, and inspire women and young people to aspire, achieve, and fulfil their purpose. Through faith-based mentoring, leadership development, wellbeing initiatives, skills-building programmes, and community projects, we help individuals build confidence, overcome barriers, and discover their potential.
+</p>
 
-      <p>
-        A world where women and young people are empowered, valued, and equipped to lead positive change, strengthen their communities, and achieve their full potential.
-      </p>
-    </section>
+<p>
+Our heart is for people and communities. We are passionate about reaching those who are often overlooked and creating opportunities that empower individuals to thrive. Through our work in communities including Cape Coast, Ghana, we support women and young people to develop their gifts, strengthen their resilience, and become positive contributors within their families and communities.
+</p>
 
-    <section class="content-section">
-      <h2 class="section-heading">Our Values</h2>
+<p>
+We believe that empowered people transform communities. By investing in individuals, nurturing leadership, and encouraging purpose-driven living, we help create lasting change that extends beyond the individual to future generations.
+</p>
+</div>
 
-      <ul class="values-list">
-        <li><strong>Empowerment</strong> – Supporting individuals to recognise and achieve their potential.</li>
-        <li><strong>Inclusion</strong> – Creating welcoming spaces where every voice matters.</li>
-        <li><strong>Leadership</strong> – Developing confident leaders who inspire positive change.</li>
-        <li><strong>Wellbeing</strong> – Promoting healthy, resilient, and thriving communities.</li>
-        <li><strong>Community</strong> – Building meaningful connections and strengthening local networks.</li>
-        <li><strong>Participation</strong> – Ensuring women and young people help shape the decisions and programmes that affect them.</li>
-      </ul>
-    </section>
+<div class="about-final">
+Discover Your Purpose. Develop Your Potential. Transform Your Community.
+</div>
 
-  </main>
+</div>
+</section>
+
+<section class="events-section" id="events">
+<div class="events-heading">
+<h2>Upcoming Events</h2>
+<p>Click a flyer to open the full poster.</p>
+</div>
+
+<div class="events-carousel-wrap">
+<button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+
+<div class="events-viewport">
+<div class="events-track" id="eventsTrack">
+
+<div class="event-card">
+<div class="event-thumb" onclick="openPoster('images/9Days.png')">
+<img src="images/9Days.png" alt="9 Days Praying in Tongues">
+</div>
+<div class="event-name">9 Days Praying in Tongues</div>
+</div>
+
+<div class="event-card">
+<div class="event-thumb" onclick="openPoster('images/Realtalk1.png')">
+<img src="images/Realtalk1.png" alt="Real Talk">
+</div>
+<div class="event-name">Real Talk</div>
+</div>
+
+<div class="event-card">
+<div class="event-thumb" onclick="openPoster('images/prayerdrops.png')">
+<img src="images/prayerdrops.png" alt="Prayer Drops">
+</div>
+<div class="event-name">Prayer Drops</div>
+</div>
+
+<div class="event-card">
+<div class="event-thumb">
+<div class="placeholder-box">Coming Soon</div>
+</div>
+<div class="event-name">Upcoming Event</div>
+</div>
+
+</div>
+</div>
+
+<button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+<div class="carousel-dots" id="carouselDots"></div>
+</div>
+</section>
+
+<section class="video-section">
+<div class="video-grid">
+
+<div class="video-box">
+<iframe src="https://www.youtube.com/embed/NdRCOiMoTw0" allowfullscreen></iframe>
+<div class="video-title">Women of Purpose Video 1</div>
+</div>
+
+<div class="video-box">
+<iframe src="https://www.youtube.com/embed/o7m4_T9X840" allowfullscreen></iframe>
+<div class="video-title">Women of Purpose Video 2</div>
+</div>
+
+<div class="video-box">
+<iframe src="https://www.youtube.com/embed/pFCEBEsPZ_s" allowfullscreen></iframe>
+<div class="video-title">Women of Purpose Video 3</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+<h3>OUR MOTTO</h3>
+<div class="motto">I PRAY. I ALIGN. I WALK IN MY PURPOSE.</div>
+<div class="contact"><i class="fab fa-whatsapp"></i> +233(0)24 624 2700</div>
+
+<div class="socials">
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</footer>
+
+</div>
+
+<div class="poster-lightbox" id="posterLightbox">
+<div class="poster-lightbox-content">
+<button class="close-lightbox" onclick="closePoster()"><i class="fas fa-times"></i></button>
+<img id="lightboxImage" src="" alt="Poster">
+</div>
+</div>
+
+<script>
+const track=document.getElementById('eventsTrack');
+const cards=document.querySelectorAll('.event-card');
+const prevBtn=document.getElementById('prevBtn');
+const nextBtn=document.getElementById('nextBtn');
+const dotsWrap=document.getElementById('carouselDots');
+
+let currentIndex=0;
+
+function getCardsPerView(){
+if(window.innerWidth<=700)return 1;
+if(window.innerWidth<=1100)return 2;
+return 4;
+}
+
+function getMaxIndex(){
+return Math.max(cards.length-getCardsPerView(),0);
+}
+
+function buildDots(){
+dotsWrap.innerHTML='';
+for(let i=0;i<=getMaxIndex();i++){
+const dot=document.createElement('span');
+dot.className='dot'+(i===currentIndex?' active':'');
+dot.onclick=()=>{currentIndex=i;updateCarousel();}
+dotsWrap.appendChild(dot);
+}
+}
+
+function updateCarousel(){
+const gap=28;
+const move=cards[0].offsetWidth+gap;
+track.style.transform=`translateX(-${currentIndex*move}px)`;
+buildDots();
+}
+
+nextBtn.onclick=()=>{
+currentIndex=currentIndex>=getMaxIndex()?0:currentIndex+1;
+updateCarousel();
+};
+
+prevBtn.onclick=()=>{
+currentIndex=currentIndex<=0?getMaxIndex():currentIndex-1;
+updateCarousel();
+};
+
+window.addEventListener('resize',updateCarousel);
+updateCarousel();
+
+function openPoster(src){
+document.getElementById('lightboxImage').src=src;
+document.getElementById('posterLightbox').classList.add('active');
+document.body.style.overflow='hidden';
+}
+
+function closePoster(){
+document.getElementById('posterLightbox').classList.remove('active');
+document.body.style.overflow='';
+}
+
+document.getElementById('posterLightbox').onclick=function(e){
+if(e.target===this)closePoster();
+};
+</script>
 
 </body>
 </html>
