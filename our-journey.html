@@ -9,6 +9,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -24,15 +27,6 @@
       padding: 70px 25px;
     }
 
-    .welcome {
-      font-family: 'Great Vibes', cursive;
-      color: #bd861c;
-      font-size: 4.5rem;
-      text-align: center;
-      margin-bottom: -10px;
-      font-weight: 400;
-    }
-
     .main-title {
       font-family: 'Cormorant Garamond', serif;
       color: #35105c;
@@ -42,6 +36,49 @@
       letter-spacing: 2px;
       margin: 0 0 20px;
       text-transform: uppercase;
+    }
+
+    .gold-line {
+      width: 90px;
+      height: 3px;
+      background: #bd861c;
+      margin: 15px auto 40px;
+    }
+
+    .journey-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin: 0 0 50px;
+    }
+
+    .journey-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 220px;
+      padding: 18px 30px;
+      border-radius: 50px;
+      background: #f8e18f;
+      border: 3px solid #c99620;
+      color: #35105c;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .journey-btn:hover {
+      background: #35105c;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .journey-btn i {
+      font-size: 1.2rem;
     }
 
     .subtitle {
@@ -72,13 +109,6 @@
       margin-bottom: 15px;
     }
 
-    .gold-line {
-      width: 90px;
-      height: 3px;
-      background: #bd861c;
-      margin: 15px auto 45px;
-    }
-
     .values-list {
       list-style: none;
       padding: 0;
@@ -103,12 +133,20 @@
         padding: 50px 20px;
       }
 
-      .welcome {
-        font-size: 3.4rem;
-      }
-
       .main-title {
         font-size: 3.2rem;
+      }
+
+      .journey-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 45px;
+      }
+
+      .journey-btn {
+        width: 90%;
+        max-width: 320px;
       }
 
       .subtitle {
@@ -131,12 +169,28 @@
 
   <main class="journey-page">
 
-    
     <h1 class="main-title">Our Journey</h1>
     <div class="gold-line"></div>
 
+    <div class="journey-buttons">
+      <a href="events.html" class="journey-btn">
+        <i class="fas fa-calendar-alt"></i>
+        Events
+      </a>
+
+      <a href="testimonies.html" class="journey-btn">
+        <i class="fas fa-comment-dots"></i>
+        Testimonies
+      </a>
+
+      <a href="connect.html" class="journey-btn">
+        <i class="far fa-heart"></i>
+        Connect
+      </a>
+    </div>
+
     <p class="subtitle">
-      Supporting women and young people across the UK and Ghana through leadership,
+      Empowering women and young people across the UK and Ghana through leadership,
       wellbeing, mentoring, skills development and community-led programmes since 2007.
     </p>
 
@@ -144,41 +198,43 @@
       <h2 class="section-heading">About Women of Purpose Global</h2>
 
       <p>
-        Women of Purpose Global is a community-led organisation established in the United Kingdom in 2007 and expanded to Ghana in 2010. We exist to empower women and young people to thrive through leadership development, wellbeing support, mentoring, skills-building, and community engagement programmes.
+        Women of Purpose Global is a community-led organisation established in the United Kingdom in 2007 and expanded to Ghana in 2010. Since our inception, we have been committed to empowering women and young people through leadership development, mentoring, wellbeing support, skills-building opportunities, and community engagement programmes.
       </p>
 
       <p>
-        Our work is rooted in the belief that every individual has potential, purpose, and a valuable voice within their community. We create safe, inclusive, and supportive spaces where women and young people can build confidence, develop life skills, strengthen their wellbeing, and access opportunities that enable them to reach their full potential.
+        Founded on the belief that every individual has value, purpose, and the ability to create positive change, we work alongside communities to provide safe, inclusive spaces where women and young people can build confidence, develop practical skills, strengthen resilience, and realise their full potential.
       </p>
 
       <p>
-        Over the years, we have delivered a range of community-based initiatives that support personal development, employability, education, social inclusion, and positive mental wellbeing. Our programmes are designed with and for the communities we serve, ensuring that participants play an active role in shaping activities, services, and future opportunities.
+        Over the years, Women of Purpose Global has evolved from a grassroots support network into an organisation delivering community-led initiatives that promote personal development, education, employability, social inclusion, health and wellbeing, and leadership growth. Our programmes are shaped by the voices and experiences of the people we serve, ensuring that activities remain relevant, accessible, and impactful.
       </p>
 
       <p>
-        A key focus of our work is youth engagement. Through youth-led projects, mentoring programmes, leadership workshops, creative activities, and community events, we empower young people to become active contributors and future leaders within their communities. We believe that young people are not simply beneficiaries of services but partners in creating meaningful and lasting change.
+        Youth participation sits at the heart of our work. Through mentoring programmes, leadership development activities, creative projects, workshops, volunteering opportunities, and youth-led community initiatives, we empower young people to become active contributors and future leaders. We believe that young people should not only participate in programmes but also influence, design, and shape them.
       </p>
 
       <p>
-        Our approach combines practical support, peer learning, community participation, and positive role modelling. We work collaboratively with families, schools, community organisations, faith groups, and local stakeholders to strengthen support networks and improve outcomes for women and young people.
+        Our approach combines mentoring, peer support, community participation, and collaborative partnerships. We work closely with families, schools, community groups, faith organisations, and local stakeholders to strengthen support systems and create opportunities that improve outcomes for women and young people.
       </p>
 
       <p>
-        Today, Women of Purpose Global continues to champion empowerment, inclusion, and community transformation across the UK and Ghana, helping individuals build confidence, develop skills, and create brighter futures for themselves and their communities.
+        Today, Women of Purpose Global continues to champion empowerment, inclusion, wellbeing, and community transformation across the UK and Ghana. Through our programmes and partnerships, we help women and young people build confidence, develop skills, amplify their voices, and become positive agents of change within their communities.
       </p>
     </section>
 
     <section class="content-section">
       <h2 class="section-heading">Our Mission</h2>
+
       <p>
-        To empower women and young people through mentoring, leadership development, wellbeing support, skills-building, and community engagement opportunities that promote confidence, resilience, inclusion, and positive life outcomes.
+        To empower women and young people through mentoring, leadership development, wellbeing support, skills-building opportunities, and community engagement programmes that promote confidence, resilience, inclusion, participation, and positive life outcomes.
       </p>
     </section>
 
     <section class="content-section">
       <h2 class="section-heading">Our Vision</h2>
+
       <p>
-        A world where women and young people are empowered, heard, and equipped to lead positive change within their communities and beyond.
+        A world where women and young people are empowered, valued, and equipped to lead positive change, strengthen their communities, and achieve their full potential.
       </p>
     </section>
 
