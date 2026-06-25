@@ -1,25 +1,313 @@
-I'll generate a complete replacement **events.html** containing:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women of Purpose | Events</title>
 
-* Consistent header matching the rest of your website
-* Updated navigation:
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  * Home
-  * Our Journey
-  * Events
-  * Testimonies
-  * Connect
-* Women of Purpose branding
-* Your new **Upcoming Dates** poster displayed prominently
-* Responsive mobile design
-* Footer with:
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  * "I PRAY. I ALIGN. I WALK IN MY PURPOSE."
-  * WhatsApp number
-  * Social media icons
-* Uses:
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#ffffff;
+    color:#2d1247;
+    overflow-x:hidden;
+}
 
-  ```html
-  <img src="upcoming-dates.png" alt="Upcoming Events">
-  ```
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
 
-  because your poster is stored in the main folder.
+.top-shape{
+    position:absolute;
+    top:0;
+    left:0;
+    width:340px;
+    height:230px;
+    background:linear-gradient(135deg,#3e0d68,#6f2da8);
+    border-bottom-right-radius:220px;
+    z-index:0;
+}
+
+.gold-splash{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+    height:220px;
+    background:linear-gradient(135deg,#f7e49a,#c79b2a);
+    clip-path:polygon(28% 0%,100% 0%,100% 100%,0% 55%);
+    opacity:.85;
+    z-index:0;
+}
+
+header{
+    text-align:center;
+    padding:28px 20px 10px;
+    position:relative;
+    z-index:5;
+    background:#ffffff;
+}
+
+header img{
+    width:145px;
+}
+
+header h1{
+    font-family:'Cinzel', serif;
+    font-size:52px;
+    line-height:1;
+    color:#341052;
+    margin-top:8px;
+}
+
+header h1 span{
+    font-size:34px;
+    font-weight:400;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    padding:20px;
+    position:relative;
+    z-index:5;
+}
+
+.nav-buttons a{
+    text-decoration:none;
+    min-width:180px;
+    padding:14px 26px;
+    border-radius:50px;
+    background:#f4dd8a;
+    border:2px solid #c89b2d;
+    color:#341052;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s ease;
+}
+
+.nav-buttons a:hover,
+.nav-buttons a.active{
+    background:#4b1770;
+    color:#ffffff;
+    border-color:#4b1770;
+    transform:translateY(-3px);
+}
+
+.events-section{
+    position:relative;
+    z-index:5;
+    padding:45px 20px 80px;
+    text-align:center;
+}
+
+.events-title{
+    font-family:'Cinzel', serif;
+    font-size:54px;
+    color:#341052;
+    margin-bottom:10px;
+}
+
+.gold-line{
+    width:100px;
+    height:3px;
+    background:#c89b2d;
+    margin:0 auto 24px;
+}
+
+.events-subtitle{
+    font-size:20px;
+    color:#5a476d;
+    margin-bottom:38px;
+}
+
+.event-poster-wrap{
+    max-width:1050px;
+    margin:0 auto;
+    padding:16px;
+    background:#fffaf0;
+    border:4px solid #c89b2d;
+    border-radius:30px;
+    box-shadow:0 18px 40px rgba(54,21,84,0.18);
+}
+
+.event-poster-wrap img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:22px;
+}
+
+footer{
+    background:linear-gradient(135deg,#2d0947,#4d1773);
+    color:#ffffff;
+    text-align:center;
+    padding:46px 20px 35px;
+    border-top:5px solid #c89b2d;
+    position:relative;
+    z-index:5;
+}
+
+footer h3{
+    font-family:'Cinzel', serif;
+    color:#e7c86f;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.motto{
+    font-size:34px;
+    margin-bottom:28px;
+}
+
+.contact{
+    font-size:34px;
+    margin-bottom:24px;
+}
+
+.contact i{
+    color:#25D366;
+    margin-right:10px;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.socials a{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:2px solid #e7c86f;
+    color:#e7c86f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:24px;
+    transition:.3s ease;
+}
+
+.socials a:hover{
+    background:#e7c86f;
+    color:#341052;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:38px;
+    }
+
+    header h1 span{
+        font-size:24px;
+    }
+
+    .nav-buttons a{
+        min-width:150px;
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+    .events-title{
+        font-size:36px;
+    }
+
+    .events-subtitle{
+        font-size:16px;
+    }
+
+    .event-poster-wrap{
+        padding:8px;
+        border-radius:20px;
+    }
+
+    .event-poster-wrap img{
+        border-radius:14px;
+    }
+
+    .motto{
+        font-size:22px;
+    }
+
+    .contact{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="top-shape"></div>
+<div class="gold-splash"></div>
+
+<header>
+    <img src="images/logo.png" alt="Women of Purpose Logo">
+    <h1>WOMEN <span>of</span><br>PURPOSE</h1>
+</header>
+
+<nav class="nav-buttons">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="our-journey.html"><i class="fas fa-road"></i> Our Journey</a>
+    <a href="events.html" class="active"><i class="fas fa-calendar-alt"></i> Events</a>
+    <a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
+    <a href="connect.html"><i class="far fa-heart"></i> Connect</a>
+</nav>
+
+<section class="events-section">
+    <h2 class="events-title">Upcoming Events</h2>
+    <div class="gold-line"></div>
+    <p class="events-subtitle">Stay connected and join our upcoming programmes.</p>
+
+    <div class="event-poster-wrap">
+        <img src="upcoming-dates.png" alt="Women of Purpose Upcoming Dates">
+    </div>
+</section>
+
+<footer>
+    <h3>OUR MOTTO</h3>
+
+    <div class="motto">
+        I PRAY. I ALIGN. I WALK IN MY PURPOSE.
+    </div>
+
+    <div class="contact">
+        <i class="fab fa-whatsapp"></i>
+        +233(0)24 624 2700
+    </div>
+
+    <div class="socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+</div>
+
+</body>
+</html>
+```
+
