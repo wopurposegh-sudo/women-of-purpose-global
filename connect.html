@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,68 +10,236 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
     font-family:'Montserrat', sans-serif;
     background:#ffffff;
     color:#2d1247;
-    margin:0;
+    overflow-x:hidden;
+}
+
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+.top-shape{
+    position:absolute;
+    top:0;
+    left:0;
+    width:340px;
+    height:230px;
+    background:linear-gradient(135deg,#3e0d68,#6f2da8);
+    border-bottom-right-radius:220px;
+    z-index:0;
+}
+
+.gold-splash{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+    height:220px;
+    background:linear-gradient(135deg,#f7e49a,#c79b2a);
+    clip-path:polygon(28% 0%,100% 0%,100% 100%,0% 55%);
+    opacity:.85;
+    z-index:0;
 }
 
 header{
     text-align:center;
-    padding:30px 20px;
+    padding:28px 20px 10px;
+    position:relative;
+    z-index:5;
+    background:#ffffff;
 }
 
 header img{
-    width:140px;
+    width:145px;
 }
 
 header h1{
     font-family:'Cinzel', serif;
-    font-size:48px;
+    font-size:52px;
+    line-height:1;
     color:#341052;
+    margin-top:8px;
+}
+
+header h1 span{
+    font-size:34px;
+    font-weight:400;
 }
 
 .nav-buttons{
     display:flex;
     justify-content:center;
-    gap:15px;
     flex-wrap:wrap;
-    margin-bottom:30px;
+    gap:18px;
+    padding:20px;
+    position:relative;
+    z-index:5;
 }
 
 .nav-buttons a{
-    padding:12px 22px;
+    text-decoration:none;
+    min-width:180px;
+    padding:14px 26px;
     border-radius:50px;
     background:#f4dd8a;
     border:2px solid #c89b2d;
-    text-decoration:none;
     color:#341052;
-    font-weight:600;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s ease;
+}
+
+.nav-buttons a:hover,
+.nav-buttons a.active{
+    background:#4b1770;
+    color:#ffffff;
+    border-color:#4b1770;
+    transform:translateY(-3px);
+}
+
+.whatsapp-quick{
+    position:relative;
+    z-index:5;
+    text-align:center;
+    padding:8px 20px 25px;
+}
+
+.whatsapp-quick a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:16px 32px;
+    border-radius:60px;
+    background:#25D366;
+    color:#ffffff;
+    font-weight:700;
+    text-decoration:none;
+    font-size:20px;
+    box-shadow:0 12px 25px rgba(37,211,102,.25);
+    transition:.3s ease;
+}
+
+.whatsapp-quick a:hover{
+    transform:translateY(-3px) scale(1.03);
+    background:#1ebe5d;
+}
+
+.whatsapp-quick i{
+    font-size:34px;
 }
 
 .connect-section{
-    max-width:800px;
-    margin:auto;
+    position:relative;
+    z-index:5;
+    max-width:900px;
+    margin:0 auto;
     text-align:center;
-    padding:30px 20px 60px;
+    padding:35px 20px 75px;
+}
+
+.connect-script{
+    font-family:'Great Vibes', cursive;
+    font-size:68px;
+    color:#b88920;
+    margin-bottom:-8px;
 }
 
 .connect-title{
-    font-family:'Great Vibes', cursive;
-    font-size:60px;
-    color:#b88920;
+    font-family:'Cinzel', serif;
+    font-size:52px;
+    color:#341052;
+    margin-bottom:12px;
+}
+
+.gold-line{
+    width:100px;
+    height:3px;
+    background:#c89b2d;
+    margin:0 auto 28px;
 }
 
 .connect-text{
-    font-size:18px;
+    font-size:19px;
     line-height:1.8;
-    margin:20px 0 20px;
+    color:#1f1f1f;
+    margin:0 auto 18px;
+    max-width:760px;
 }
 
-.connect-text.second{
-    margin-top:10px;
+.contact-card{
+    margin:38px auto 38px;
+    max-width:760px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.contact-option{
+    background:#fffaf0;
+    border:3px solid #c89b2d;
+    border-radius:28px;
+    padding:28px 22px;
+    box-shadow:0 15px 35px rgba(54,21,84,.12);
+    text-align:center;
+}
+
+.contact-option i{
+    font-size:42px;
+    color:#4b1770;
+    margin-bottom:16px;
+}
+
+.contact-option h3{
+    font-family:'Cinzel', serif;
+    color:#341052;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.contact-option p{
+    font-size:16px;
+    color:#333;
+    margin-bottom:16px;
+    line-height:1.6;
+}
+
+.contact-option a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:12px 22px;
+    border-radius:40px;
+    background:#4b1770;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s ease;
+}
+
+.contact-option a:hover{
+    background:#c89b2d;
+    color:#341052;
+    transform:translateY(-2px);
+}
+
+.contact-option.whatsapp i{
+    color:#25D366;
 }
 
 .email-highlight{
@@ -78,30 +247,21 @@ header h1{
     font-weight:700;
 }
 
-.contact-icons{
-    display:flex;
-    justify-content:center;
-    margin:35px 0 40px;
+.form-wrap{
+    max-width:760px;
+    margin:0 auto;
+    background:#ffffff;
+    border:3px solid #ead9a1;
+    border-radius:30px;
+    padding:32px;
+    box-shadow:0 15px 35px rgba(54,21,84,.10);
 }
 
-.contact-icons a{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    border:3px solid #c89b2d;
-    color:#c89b2d;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:34px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.contact-icons a:hover{
-    background:#c89b2d;
+.form-title{
+    font-family:'Cinzel', serif;
     color:#341052;
-    transform:scale(1.05);
+    font-size:28px;
+    margin-bottom:18px;
 }
 
 .contact-form{
@@ -113,82 +273,265 @@ header h1{
 .contact-form input,
 .contact-form textarea{
     padding:15px;
-    border-radius:10px;
+    border-radius:12px;
     border:2px solid #e5d9a8;
     font-size:15px;
     font-family:'Montserrat', sans-serif;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#c89b2d;
 }
 
 .contact-form textarea{
-    height:120px;
+    height:130px;
     resize:none;
 }
 
 .contact-form button{
-    padding:14px;
+    padding:15px;
     border:none;
     border-radius:40px;
     background:#4b1770;
-    color:white;
-    font-weight:600;
+    color:#ffffff;
+    font-weight:700;
     cursor:pointer;
     font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    transition:.3s ease;
 }
 
 .contact-form button:hover{
     background:#c89b2d;
     color:#341052;
+    transform:translateY(-2px);
 }
 
 .note{
     margin-top:15px;
     font-size:14px;
     color:#777;
+    line-height:1.6;
 }
 
+footer{
+    background:linear-gradient(135deg,#2d0947,#4d1773);
+    color:#ffffff;
+    text-align:center;
+    padding:46px 20px 35px;
+    border-top:5px solid #c89b2d;
+    position:relative;
+    z-index:5;
+}
+
+footer h3{
+    font-family:'Cinzel', serif;
+    color:#e7c86f;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.motto{
+    font-size:34px;
+    margin-bottom:28px;
+}
+
+.contact{
+    font-size:34px;
+    margin-bottom:24px;
+}
+
+.contact i{
+    color:#25D366;
+    margin-right:10px;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.socials a{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:2px solid #e7c86f;
+    color:#e7c86f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:24px;
+    transition:.3s ease;
+}
+
+.socials a:hover{
+    background:#e7c86f;
+    color:#341052;
+}
+
+@media(max-width:800px){
+    header h1{
+        font-size:38px;
+    }
+
+    header h1 span{
+        font-size:24px;
+    }
+
+    .nav-buttons a{
+        min-width:150px;
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+    .whatsapp-quick a{
+        font-size:17px;
+        padding:14px 22px;
+    }
+
+    .connect-script{
+        font-size:54px;
+    }
+
+    .connect-title{
+        font-size:36px;
+    }
+
+    .connect-text{
+        font-size:17px;
+    }
+
+    .contact-card{
+        grid-template-columns:1fr;
+    }
+
+    .form-wrap{
+        padding:24px 18px;
+    }
+
+    .motto{
+        font-size:22px;
+    }
+
+    .contact{
+        font-size:22px;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<div class="wrapper">
+
+<div class="top-shape"></div>
+<div class="gold-splash"></div>
+
 <header>
-    <img src="images/logo.png" alt="Logo">
-    <h1>Women of Purpose</h1>
+    <img src="images/logo.png" alt="Women of Purpose Logo">
+    <h1>WOMEN <span>of</span><br>PURPOSE</h1>
 </header>
 
 <nav class="nav-buttons">
-    <a href="index.html">
-        <i class="fas fa-home"></i> Home
-    </a>
-
-    <a href="our-journey.html">
-        <i class="fas fa-road"></i> Our Journey
-    </a>
-
-    <a href="events.html">
-        <i class="fas fa-calendar-alt"></i> Events
-    </a>
-
-    <a href="testimonies.html">
-        <i class="fas fa-comment-dots"></i> Testimonies
-    </a>
-
-    <a href="connect.html">
-        <i class="far fa-heart"></i> Connect
-    </a>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="our-journey.html"><i class="fas fa-road"></i> Our Journey</a>
+    <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+    <a href="testimonies.html"><i class="fas fa-comment-dots"></i> Testimonies</a>
+    <a href="connect.html" class="active"><i class="far fa-heart"></i> Connect</a>
 </nav>
-    <form class="contact-form" action="mailto:wopurposegh@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="text" name="contact" placeholder="Your Contact">
-        <textarea name="message" placeholder="Your Message"></textarea>
-        <button type="submit">Send via Email</button>
-    </form>
 
-    <div class="note">
-        Clicking send will open your email app.
+<div class="whatsapp-quick">
+    <a href="https://wa.me/233246242700" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp Us
+    </a>
+</div>
+
+<section class="connect-section">
+
+    <div class="connect-script">Connect with</div>
+    <h2 class="connect-title">Women of Purpose</h2>
+    <div class="gold-line"></div>
+
+    <p class="connect-text">
+        We would love to hear from you. Whether you would like to join a programme, ask a question, share a testimony, partner with us, or learn more about Women of Purpose, please get in touch.
+    </p>
+
+    <p class="connect-text">
+        You can contact us directly by email or WhatsApp using the links below.
+    </p>
+
+    <div class="contact-card">
+
+        <div class="contact-option">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Us</h3>
+            <p>
+                Send us a message at<br>
+                <span class="email-highlight">wopurposegh@gmail.com</span>
+            </p>
+            <a href="mailto:wopurposegh@gmail.com">
+                <i class="fas fa-paper-plane"></i> Email
+            </a>
+        </div>
+
+        <div class="contact-option whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>
+                Contact us directly on WhatsApp<br>
+                +233 (0)24 624 2700
+            </p>
+            <a href="https://wa.me/233246242700" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Message
+            </a>
+        </div>
+
+    </div>
+
+    <div class="form-wrap">
+        <h3 class="form-title">Send a Message</h3>
+
+        <form class="contact-form" action="mailto:wopurposegh@gmail.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="contact" placeholder="Your Contact Number or Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send via Email</button>
+        </form>
+
+        <div class="note">
+            Clicking send will open your email app. You can also email us directly at wopurposegh@gmail.com.
+        </div>
     </div>
 
 </section>
 
+<footer>
+    <h3>OUR MOTTO</h3>
+
+    <div class="motto">
+        I PRAY. I ALIGN. I WALK IN MY PURPOSE.
+    </div>
+
+    <div class="contact">
+        <i class="fab fa-whatsapp"></i>
+        +233(0)24 624 2700
+    </div>
+
+    <div class="socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+</div>
+
 </body>
 </html>
+```
